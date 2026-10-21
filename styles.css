@@ -136,3 +136,62 @@
 .favorite-btn.is-favorite{color:#b94747;background:#fff}
 .favorite-btn:focus-visible,.favorites-toggle:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 @media(max-width:620px){.favorites-toggle{align-self:flex-start}}
+
+/* Correzione definitiva finestra prodotto su iPad */
+.product-dialog[open] {
+  position: fixed;
+  left: 50%;
+  top: 3dvh;
+  transform: translateX(-50%);
+  width: min(760px, calc(100vw - 24px));
+  max-width: calc(100vw - 24px);
+  max-height: 94dvh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+}
+
+.product-dialog .dialog-content {
+  min-width: 0;
+  overflow: visible;
+}
+
+.product-dialog .dialog-close {
+  position: sticky;
+  float: right;
+  top: 8px;
+  right: 8px;
+  z-index: 30;
+}
+
+@media (max-height: 700px) and (orientation: landscape) {
+  .product-dialog[open] {
+    top: 2dvh;
+    max-height: 96dvh;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .product-dialog .dialog-visual {
+    display: none;
+  }
+
+  .product-dialog .dialog-content {
+    padding: 20px 24px;
+  }
+
+  .product-dialog .dialog-content h2 {
+    font-size: 26px;
+    margin: 6px 0 12px;
+  }
+
+  .product-dialog .dialog-desc {
+    margin-bottom: 14px;
+  }
+
+  .product-dialog .dialog-price {
+    margin: 12px 0;
+  }
+}
+
