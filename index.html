@@ -98,7 +98,10 @@
   <dialog id="product-dialog" class="product-dialog">
     <form method="dialog"><button class="dialog-close" aria-label="Chiudi">×</button></form>
     <div class="dialog-visual"><span class="dialog-leaf">✳</span><span id="dialog-category" class="dialog-category"></span><div class="dialog-stem"></div></div>
-    <div class="dialog-content"><span class="eyebrow">VIVAIO SIRACUSA</span><h2 id="dialog-title"></h2><p class="dialog-desc">Scegli il formato del vaso per visualizzare il prezzo e inviare una richiesta d'ordine su WhatsApp.</p><label class="size-label" for="size-select">Formato del vaso</label><select id="size-select"></select><div class="dialog-price"><small>PREZZO AL DETTAGLIO</small><strong id="dialog-price"></strong></div><button id="order-button" class="primary-cta dialog-order">Richiedi su WhatsApp <span>↗</span></button><p class="dialog-footnote">La disponibilità verrà confermata dal vivaio prima dell'ordine.</p></div>
+    <div class="dialog-content"><span class="eyebrow">VIVAIO SIRACUSA</span><h2 id="dialog-title"></h2><p class="dialog-desc">Scegli il formato del vaso per visualizzare il prezzo e inviare una richiesta d'ordine su WhatsApp.</p><label class="size-label" for="size-select">Formato del vaso</label><select id="size-select"></select><label for="quantity-input">Quantità</label>
+<input id="quantity-input" type="number" min="1" max="99" value="1">
+
+<div class="dialog-price"><div class="dialog-price"><small>PREZZO AL DETTAGLIO</small><strong id="dialog-price"></strong></div><button id="order-button" class="primary-cta dialog-order">Richiedi su WhatsApp <span>↗</span></button><p class="dialog-footnote">La disponibilità verrà confermata dal vivaio prima dell'ordine.</p></div>
   </dialog>
 
   <script src="script.js"></script>
