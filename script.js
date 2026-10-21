@@ -35,6 +35,113 @@ const empty = document.getElementById("empty");
 const dialog = document.getElementById("product-dialog");
 const sizeSelect = document.getElementById("size-select");
 const quantityInput = document.getElementById("quantity-input");
+const galleryImage = document.getElementById("gallery-image");
+const galleryPlaceholder = document.getElementById("gallery-placeholder");
+const galleryCount = document.getElementById("gallery-count");
+const galleryPrev = document.getElementById("gallery-prev");
+const galleryNext = document.getElementById("gallery-next");
+let galleryImages = [];
+let galleryIndex = 0;
+let galleryRequest = 0;
+
+async function loadProductPhotos(product) {
+  const request = ++galleryRequest;
+  galleryImages = [];
+  galleryIndex = 0;
+  galleryImage.hidden = true;
+  galleryImage.removeAttribute("src");
+  galleryPlaceholder.hidden = false;
+  galleryPlaceholder.textContent = "Ricerca delle foto in corso…";
+  galleryCount.textContent = "";
+  galleryPrev.hidden = true;
+  galleryNext.hidden = true;
+
+  const species = [
+    [/^Limone/i, "Citrus limon"],
+    [/^Arancio/i, "Citrus sinensis"],
+    [/^Clementino/i, "Citrus clementina"],
+    [/^Mandarino/i, "Citrus reticulata"],
+    [/^LemonKounguat/i, "Citrus × meyeri"],
+    [/^Kounguat/i, "Citrus japonica"],
+    [/^Lime/i, "Citrus aurantiifolia"],
+    [/^Pompelmo/i, "Citrus × paradisi"],
+    [/^Cedro/i, "Citrus medica"]
+  ];
+  const match = species.find(([pattern]) => pattern.test(product.name));
+  const query = (match ? match[1] + " " : "Citrus ") + product.name;
+
+  try {
+    const endpoint = "https://commons.wikimedia.org/w/api.php?action=query"
+      + "&generator=search&gsrnamespace=6&gsrlimit=10"
+      + "&gsrsearch=" + encodeURIComponent(query)
+      + "&prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=1000"
+      + "&format=json&origin=*";
+    const response = await fetch(endpoint);
+    if (!response.ok) throw new Error("Ricerca non disponibile");
+    const data = await response.json();
+    if (request !== galleryRequest) return;
+
+    galleryImages = Object.values(data.query?.pages || {})
+      .map(page => {
+        const info = page.imageinfo?.[0];
+        if (!info) return null;
+        const url = info.thumburl || info.url;
+        const title = page.title || "";
+        if (!url || !/^https?:/.test(url)) return null;
+        if (!/\.(jpe?g|png|webp)(\?|$)/i.test(url)) return null;
+        return {
+          url,
+          title,
+          author: info.extmetadata?.Artist?.value || "",
+          license: info.extmetadata?.LicenseShortName?.value || ""
+        };
+      })
+      .filter(Boolean);
+
+    if (!galleryImages.length) {
+      galleryPlaceholder.textContent = "Non sono state trovate foto per questa varietà.";
+      return;
+    }
+    showGalleryImage();
+  } catch (error) {
+    if (request === galleryRequest) {
+      galleryPlaceholder.textContent = "Foto online non disponibili. Riprova più tardi.";
+    }
+  }
+}
+
+function showGalleryImage() {
+  const photo = galleryImages[galleryIndex];
+  if (!photo) return;
+  galleryImage.onload = () => {
+    galleryPlaceholder.hidden = true;
+    galleryImage.hidden = false;
+  };
+  galleryImage.onerror = () => {
+    galleryImage.hidden = true;
+    galleryPlaceholder.hidden = false;
+    galleryPlaceholder.textContent = "Questa foto non è disponibile.";
+  };
+  galleryImage.alt = "Foto online di " + selectedProduct.name;
+  galleryImage.src = photo.url;
+  galleryCount.textContent = (galleryIndex + 1) + " / " + galleryImages.length;
+  galleryCount.title = [photo.title, photo.author, photo.license]
+    .filter(Boolean).join(" — ");
+  galleryPrev.hidden = galleryImages.length < 2;
+  galleryNext.hidden = galleryImages.length < 2;
+}
+
+galleryPrev.addEventListener("click", () => {
+  if (!galleryImages.length) return;
+  galleryIndex = (galleryIndex - 1 + galleryImages.length) % galleryImages.length;
+  showGalleryImage();
+});
+galleryNext.addEventListener("click", () => {
+  if (!galleryImages.length) return;
+  galleryIndex = (galleryIndex + 1) % galleryImages.length;
+  showGalleryImage();
+});
+
 
 let activeCategory = "Tutte";
 let selectedProduct = products[0];
@@ -142,6 +249,7 @@ function openProduct(product) {
   selectedProduct = product;
   document.getElementById("dialog-title").textContent = product.name;
   document.getElementById("dialog-category").textContent = product.category.toUpperCase();
+  loadProductPhotos(product);
   sizeSelect.innerHTML = product.sizes.map((s, i) =>
     `<option value="${i}">${s.label} — ${euro(s.price)}</option>`
   ).join("");

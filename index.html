@@ -98,7 +98,16 @@
 
   <dialog id="product-dialog" class="product-dialog">
     <form method="dialog"><button class="dialog-close" aria-label="Chiudi">×</button></form>
-    <div class="dialog-visual"><span class="dialog-leaf">✳</span><span id="dialog-category" class="dialog-category"></span><div class="dialog-stem"></div></div>
+    <div class="dialog-visual gallery-visual">
+      <span id="dialog-category" class="dialog-category"></span>
+      <div class="product-gallery">
+        <button class="gallery-arrow gallery-prev" id="gallery-prev" type="button" aria-label="Foto precedente" hidden>‹</button>
+        <img id="gallery-image" alt="" hidden>
+        <div class="gallery-placeholder" id="gallery-placeholder">Ricerca delle foto in corso…</div>
+        <button class="gallery-arrow gallery-next" id="gallery-next" type="button" aria-label="Foto successiva" hidden>›</button>
+        <div class="gallery-count" id="gallery-count"></div>
+      </div>
+    </div>
     <div class="dialog-content"><span class="eyebrow">VIVAIO SIRACUSA</span><h2 id="dialog-title"></h2><p class="dialog-desc">Scegli il formato del vaso per visualizzare il prezzo e inviare una richiesta d'ordine su WhatsApp.</p><label class="size-label" for="size-select">Formato del vaso</label><select id="size-select"></select><label for="quantity-input">Quantità</label>
 <input id="quantity-input" type="number" min="1" max="99" value="1">
 
