@@ -38,6 +38,28 @@ const quantityInput = document.getElementById("quantity-input");
 
 let activeCategory = "Tutte";
 let selectedProduct = products[0];
+let favoritesOnly = false;
+let favorites = new Set();
+try {
+  favorites = new Set(JSON.parse(localStorage.getItem("vivaio-siracusa-favorites") || "[]"));
+} catch {}
+const favoritesToggle = document.getElementById("favorites-toggle");
+
+function saveFavorites() {
+  try { localStorage.setItem("vivaio-siracusa-favorites", JSON.stringify([...favorites])); } catch {}
+  const count = document.getElementById("favorites-count");
+  if (count) count.textContent = favorites.size;
+  favoritesToggle.classList.toggle("active", favoritesOnly);
+  favoritesToggle.setAttribute("aria-pressed", String(favoritesOnly));
+  favoritesToggle.innerHTML = `${favoritesOnly ? "♥" : "♡"} Preferiti <span id="favorites-count">${favorites.size}</span>`;
+}
+
+function toggleFavorite(id) {
+  if (favorites.has(id)) favorites.delete(id);
+  else favorites.add(id);
+  saveFavorites();
+  renderProducts();
+}
 
 function euro(value) {
   return new Intl.NumberFormat("it-IT", {
@@ -74,6 +96,7 @@ function renderProducts() {
   const q = search.value.trim().toLocaleLowerCase("it");
   const shown = products.filter(p =>
     (activeCategory === "Tutte" || p.category === activeCategory) &&
+    (!favoritesOnly || favorites.has(p.id)) &&
     p.name.toLocaleLowerCase("it").includes(q)
   );
 
@@ -84,7 +107,7 @@ function renderProducts() {
     <article class="product-card" tabindex="0" role="button"
       aria-label="Dettagli ${p.name}" data-id="${p.id}">
       <div class="product-visual" style="--visual:${categoryColors[p.category] || "#e9edda"}">
-        <span class="product-badge">${p.category.toUpperCase()}</span>${plantArt(p.category)}
+        <span class="product-badge">${p.category.toUpperCase()}</span><button class="favorite-btn ${favorites.has(p.id) ? "is-favorite" : ""}" type="button" data-favorite="${p.id}" aria-label="Preferiti" aria-pressed="${favorites.has(p.id)}">${favorites.has(p.id) ? "♥" : "♡"}</button>${plantArt(p.category)}
       </div>
       <div class="card-info">
         <span class="card-category">${p.category.toUpperCase()}</span>
@@ -95,6 +118,13 @@ function renderProducts() {
         </div>
       </div>
     </article>`).join("");
+
+  grid.querySelectorAll(".favorite-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.stopPropagation();
+      toggleFavorite(Number(btn.dataset.favorite));
+    });
+  });
 
   grid.querySelectorAll(".product-card").forEach(card => {
     const open = () => openProduct(products.find(p => p.id === Number(card.dataset.id)));
@@ -149,6 +179,36 @@ Potete confermarmi disponibilità e modalità di consegna?`;
   window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`, "_blank");
 });
 
+favoritesToggle.addEventListener("click", () => {
+  favoritesOnly = !favoritesOnly;
+  saveFavorites();
+  renderProducts();
+});
 search.addEventListener("input", renderProducts);
 renderFilters();
+saveFavorites();
 renderProducts();
+
+// Permette di chiudere il dialogo toccando lo sfondo esterno.
+dialog.addEventListener("click", (event) => {
+  const rect = dialog.getBoundingClientRect();
+  const outside =
+    event.clientX < rect.left ||
+    event.clientX > rect.right ||
+    event.clientY < rect.top ||
+    event.clientY > rect.bottom;
+
+  if (outside) dialog.close();
+});
+
+// Permette di chiudere il dialogo toccando lo sfondo esterno.
+dialog.addEventListener("click", (event) => {
+  const rect = dialog.getBoundingClientRect();
+  const outside =
+    event.clientX < rect.left ||
+    event.clientX > rect.right ||
+    event.clientY < rect.top ||
+    event.clientY > rect.bottom;
+
+  if (outside) dialog.close();
+});
