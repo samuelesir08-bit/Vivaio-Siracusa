@@ -1317,3 +1317,177 @@ body { background: var(--paper); }
   .hero-art.hero-photo { border-radius: 44% 44% 22px 22px; }
   .product-card:hover { transform: none; }
 }
+
+
+/* MODERN MEDITERRANEAN — VIVAIO SIRACUSA */
+:root {
+  --forest: #123728;
+  --deep: #0b241a;
+  --leaf: #8ca16d;
+  --cream: #f4f0e5;
+  --paper: #fffdf7;
+  --terra: #b96e49;
+}
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body { background: var(--paper); color: #20362a; }
+.site-header {
+  position: absolute; top: 0; left: 0; right: 0; z-index: 20;
+  background: linear-gradient(180deg,rgba(8,27,19,.68),transparent);
+  border: 0; box-shadow: none;
+}
+.site-header .brand-logo { filter: drop-shadow(0 2px 10px rgba(0,0,0,.15)); }
+.site-header .header-cta {
+  border: 1px solid rgba(255,255,255,.48);
+  box-shadow: 0 8px 25px rgba(0,0,0,.13);
+}
+.hero {
+  position: relative; isolation: isolate; overflow: hidden;
+  min-height: min(820px,92svh);
+  padding-top: 135px;
+  background:
+    linear-gradient(90deg,rgba(8,28,19,.84) 0%,rgba(8,28,19,.62) 36%,rgba(8,28,19,.08) 75%),
+    radial-gradient(ellipse at 76% 30%,rgba(255,214,142,.2),transparent 42%),
+    linear-gradient(130deg,#193b2a,#7e9474);
+  color: #fffdf4;
+}
+.hero::after {
+  content: ""; position:absolute; inset:0; z-index:-1; pointer-events:none;
+  background: linear-gradient(0deg,rgba(7,24,17,.32),transparent 38%);
+}
+.hero-copy { position:relative; z-index:2; }
+.hero .eyebrow { color:#e4d6ad; }
+.hero h1 {
+  max-width: 680px; font-size:clamp(58px,8vw,112px);
+  line-height:.91; letter-spacing:-.065em; font-weight:500;
+  text-wrap:balance;
+}
+.hero h1 em { color:#e8d5a7; }
+.hero-copy > p { max-width:470px; color:rgba(255,253,244,.85); font-size:clamp(15px,1.35vw,19px); }
+.hero .primary-cta { background:#f7f0dd; color:#143626; }
+.hero-note { color:#fffdf4; }
+.hero-note small { color:rgba(255,253,244,.72); }
+.hero-art.hero-photo {
+  position:absolute; z-index:1; right:5%; top:13%;
+  width:min(49%,680px); height:78%; min-height:420px;
+  border-radius:46% 46% 14px 14px;
+  box-shadow:0 35px 100px rgba(0,0,0,.24);
+  animation: modern-hero-in 1.2s cubic-bezier(.16,1,.3,1) both;
+}
+.hero-photo-image { width:100%; height:100%; object-fit:cover; }
+.art-label { top:auto; bottom:70px; }
+.art-caption { bottom:24px; }
+.trust-strip {
+  position:relative; z-index:3;
+  background:var(--forest); color:#fffdf4;
+  padding-top:24px; padding-bottom:24px;
+}
+.trust-strip p small { color:rgba(255,253,244,.68); }
+.trust-strip > div > span { color:#d8c48f; }
+.brand-story {
+  display:grid; grid-template-columns:1.1fr .9fr;
+  min-height:420px; background:var(--cream);
+}
+.story-image {
+  min-height:420px; position:relative; overflow:hidden;
+  background:
+    linear-gradient(0deg,rgba(12,35,24,.42),transparent 52%),
+    url("citrus-cover.svg") center 48% / cover no-repeat,
+    #d8dfca;
+}
+.story-image span {
+  position:absolute; bottom:28px; left:30px; color:#fff8e9;
+  font-size:10px; letter-spacing:.22em;
+}
+.story-copy {
+  align-self:center; padding:clamp(32px,6vw,88px);
+  background:radial-gradient(ellipse at 100% 0%,#e2e5d1,transparent 58%),var(--cream);
+}
+.story-copy h2 {
+  max-width:540px; margin:18px 0;
+  font:500 clamp(40px,5vw,68px)/.98 "Playfair Display",Georgia,serif;
+  letter-spacing:-.055em;
+}
+.story-copy h2 em { color:#72865d; }
+.story-copy p { max-width:460px; line-height:1.8; color:#667064; }
+.story-link {
+  display:inline-flex; gap:18px; align-items:center; margin-top:16px;
+  color:var(--forest); text-decoration:none; font-weight:700;
+  border-bottom:1px solid #9ba58b; padding-bottom:8px;
+}
+.catalog-section { background:#fffdf7; }
+.section-heading h2 {
+  font-size:clamp(38px,5vw,66px); line-height:1; letter-spacing:-.055em;
+}
+.product-card {
+  overflow:hidden; border:1px solid #e9e6dc; border-radius:15px;
+  box-shadow:0 5px 22px rgba(20,50,34,.05);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s;
+}
+.product-card:hover {
+  transform:translateY(-8px); border-color:#c7d0b8;
+  box-shadow:0 22px 44px rgba(20,50,34,.13);
+}
+.product-visual { overflow:hidden; }
+.product-visual img { transition:transform .65s cubic-bezier(.2,.8,.2,1); }
+.product-card:hover .product-visual img { transform:scale(1.07); }
+.primary-cta,.header-cta,.whatsapp-cta {
+  transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+}
+.primary-cta:hover,.header-cta:hover,.whatsapp-cta:hover {
+  transform:translateY(-3px); box-shadow:0 15px 34px rgba(0,0,0,.2);
+}
+.order-banner {
+  background:linear-gradient(115deg,#153b2a,#0d291d);
+  color:#fffdf4; border:0;
+}
+.order-banner p { color:rgba(255,253,244,.75); }
+.order-banner h2 em { color:#e3d1a3; }
+.order-icon { background:rgba(255,255,255,.12); color:#f0e4c6; }
+.whatsapp-cta { background:#f5efdf; color:#143626; }
+.site-footer { background:#0b241a; color:#fffdf4; border:0; }
+.site-footer p,.site-footer a:not(.brand) { color:rgba(255,253,244,.72); }
+@keyframes modern-hero-in {
+  from { opacity:0; transform:translateY(25px) scale(.975); }
+  to { opacity:1; transform:translateY(0) scale(1); }
+}
+.hero-copy > * { animation:modern-text-in .8s cubic-bezier(.16,1,.3,1) both; }
+.hero-copy .eyebrow { animation-delay:.05s; }
+.hero-copy h1 { animation-delay:.15s; }
+.hero-copy > p { animation-delay:.25s; }
+.hero-copy .primary-cta { animation-delay:.35s; }
+.hero-copy .hero-note { animation-delay:.45s; }
+@keyframes modern-text-in {
+  from { opacity:0; transform:translateY(22px); }
+  to { opacity:1; transform:translateY(0); }
+}
+@media (min-width:1200px) {
+  .hero { padding-left:max(7vw,calc((100vw - 1400px)/2)); }
+  .hero-copy { max-width:620px; }
+}
+@media (max-width:760px) {
+  .site-header { position:relative; background:var(--forest); }
+  .site-header .header-cta { border:1px solid rgba(255,255,255,.28); }
+  .hero {
+    min-height:0; padding:50px 22px 28px; gap:28px;
+    background:linear-gradient(150deg,#102f23,#31583b);
+  }
+  .hero h1 { font-size:clamp(48px,13vw,72px); }
+  .hero-art.hero-photo {
+    position:relative; top:auto; right:auto;
+    width:100%; height:auto; min-height:0; aspect-ratio:4/4.4;
+    border-radius:44% 44% 12px 12px;
+  }
+  .art-label { bottom:58px; }
+  .brand-story { grid-template-columns:1fr; }
+  .story-image { min-height:300px; }
+  .story-copy { padding:34px 24px 42px; }
+  .trust-strip { display:grid; grid-template-columns:1fr 1fr; }
+  .trust-strip > div { min-width:0; }
+}
+@media (prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+  *,*::before,*::after {
+    animation-duration:.01ms!important; animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+  }
+}
