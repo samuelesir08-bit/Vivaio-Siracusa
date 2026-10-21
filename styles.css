@@ -1391,7 +1391,7 @@ body { background: var(--paper); color: #20362a; }
   min-height:420px; position:relative; overflow:hidden;
   background:
     linear-gradient(0deg,rgba(12,35,24,.42),transparent 52%),
-    url("../C52F3411-EAC5-4830-AF89-CB359CA42CA6.png") center 48% / cover no-repeat,
+    url("C52F3411-EAC5-4830-AF89-CB359CA42CA6.png") center 48% / cover no-repeat,
     #d8dfca;
 }
 .story-image span {
