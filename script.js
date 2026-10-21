@@ -66,9 +66,36 @@ function openProduct(product){
   if(typeof dialog.showModal==="function") dialog.showModal(); else dialog.setAttribute("open","");
 }
 function updateDialogPrice(){
-  const size=selectedProduct.sizes[Number(sizeSelect.value)||0];
-  document.getElementById("dialog-price").textContent=euro(size.price);
+  const size = selectedProduct.sizes[Number(sizeSelect.value) || 0];
+  const quantityInput = document.getElementById("quantity-input");
+  const qty = Math.max(1, Math.min(99, Number(quantityInput.value) || 1));
+
+  quantityInput.value = qty;
+  document.getElementById("dialog-price").textContent = euro(size.price * qty);
 }
+
+sizeSelect.addEventListener("change", updateDialogPrice);
+document.getElementById("quantity-input").addEventListener("input", updateDialogPrice);
+
+document.getElementById("order-button").addEventListener("click", () => {
+  const size = selectedProduct.sizes[Number(sizeSelect.value) || 0];
+  const qty = Math.max(1, Math.min(99, Number(document.getElementById("quantity-input").value) || 1));
+
+  const message = `Ciao Vivaio Siracusa, vorrei informazioni e disponibilità per:
+• ${selectedProduct.name}
+• ${size.label}
+• Quantità: ${qty}
+• Prezzo unitario: ${euro(size.price)}
+• Totale indicativo: ${euro(size.price * qty)}
+
+Potete confermarmi disponibilità e modalità di consegna?`;
+
+  window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`, "_blank");
+});
+
+search.addEventListener("input", renderProducts);
+renderFilters();
+renderProducts();
 sizeSelect.addEventListener("change",updateDialogPrice);
 document.getElementById("order-button").addEventListener("click",()=>{
   const size=selectedProduct.sizes[Number(sizeSelect.value)||0];
