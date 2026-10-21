@@ -127,25 +127,265 @@
       "source": "https://commons.wikimedia.org/wiki/File:Citrus_limon_-_Lemon_tree_-_Limonero_-_Limoeiro.JPG"
     }
   ],
-  "Arancio Tarocco": [],
-  "Arancio Washington": [],
-  "Arancio Moro": [],
-  "Arancio Navellino": [],
-  "Arancio Valencia": [],
-  "Arancio Calabrese": [],
-  "Clementino Isa": [],
-  "Clementino Hermand": [],
-  "Mandarino Marzaiolo": [],
-  "Mandarino Tardivo": [],
-  "Kounguat": [],
-  "LemonKounguat": [],
-  "Kounguat Gigante": [],
-  "Lime Taiti": [],
+  "Arancio Tarocco": [
+    {
+      "url": "images/products/arancio-tarocco-1.jpg",
+      "title": "File:Ambersweet oranges.jpg",
+      "author": "",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Ambersweet_oranges.jpg"
+    },
+    {
+      "url": "images/products/arancio-tarocco-2.jpg",
+      "title": "File:Citrus-sinensis-fruto.jpg",
+      "author": "<a href=\"//commons.wikimedia.org/wiki/User:Luis_Fern%C3%A1ndez_Garc%C3%ADa\" title=\"User:Luis Fernández García\">Luis Fernández García</a>",
+      "license": "CC BY-SA 2.5 es",
+      "source": "https://commons.wikimedia.org/wiki/File:Citrus-sinensis-fruto.jpg"
+    }
+  ],
+  "Arancio Washington": [
+    {
+      "url": "images/products/arancio-washington-1.jpg",
+      "title": "File:Ambersweet oranges.jpg",
+      "author": "",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Ambersweet_oranges.jpg"
+    },
+    {
+      "url": "images/products/arancio-washington-2.jpg",
+      "title": "File:Citrus-sinensis-fruto.jpg",
+      "author": "<a href=\"//commons.wikimedia.org/wiki/User:Luis_Fern%C3%A1ndez_Garc%C3%ADa\" title=\"User:Luis Fernández García\">Luis Fernández García</a>",
+      "license": "CC BY-SA 2.5 es",
+      "source": "https://commons.wikimedia.org/wiki/File:Citrus-sinensis-fruto.jpg"
+    }
+  ],
+  "Arancio Moro": [
+    {
+      "url": "images/products/arancio-moro-1.jpg",
+      "title": "File:Ambersweet oranges.jpg",
+      "author": "",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Ambersweet_oranges.jpg"
+    },
+    {
+      "url": "images/products/arancio-moro-2.jpg",
+      "title": "File:Citrus-sinensis-fruto.jpg",
+      "author": "<a href=\"//commons.wikimedia.org/wiki/User:Luis_Fern%C3%A1ndez_Garc%C3%ADa\" title=\"User:Luis Fernández García\">Luis Fernández García</a>",
+      "license": "CC BY-SA 2.5 es",
+      "source": "https://commons.wikimedia.org/wiki/File:Citrus-sinensis-fruto.jpg"
+    }
+  ],
+  "Arancio Navellino": [
+    {
+      "url": "images/products/arancio-navellino-1.jpg",
+      "title": "File:Ambersweet oranges.jpg",
+      "author": "",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Ambersweet_oranges.jpg"
+    },
+    {
+      "url": "images/products/arancio-navellino-2.jpg",
+      "title": "File:Citrus-sinensis-fruto.jpg",
+      "author": "<a href=\"//commons.wikimedia.org/wiki/User:Luis_Fern%C3%A1ndez_Garc%C3%ADa\" title=\"User:Luis Fernández García\">Luis Fernández García</a>",
+      "license": "CC BY-SA 2.5 es",
+      "source": "https://commons.wikimedia.org/wiki/File:Citrus-sinensis-fruto.jpg"
+    }
+  ],
+  "Arancio Valencia": [
+    {
+      "url": "images/products/arancio-valencia-1.jpg",
+      "title": "File:Ambersweet oranges.jpg",
+      "author": "",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Ambersweet_oranges.jpg"
+    },
+    {
+      "url": "images/products/arancio-valencia-2.jpg",
+      "title": "File:Citrus-sinensis-fruto.jpg",
+      "author": "<a href=\"//commons.wikimedia.org/wiki/User:Luis_Fern%C3%A1ndez_Garc%C3%ADa\" title=\"User:Luis Fernández García\">Luis Fernández García</a>",
+      "license": "CC BY-SA 2.5 es",
+      "source": "https://commons.wikimedia.org/wiki/File:Citrus-sinensis-fruto.jpg"
+    }
+  ],
+  "Arancio Calabrese": [
+    {
+      "url": "images/products/arancio-calabrese-1.jpg",
+      "title": "File:Ambersweet oranges.jpg",
+      "author": "",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Ambersweet_oranges.jpg"
+    },
+    {
+      "url": "images/products/arancio-calabrese-2.jpg",
+      "title": "File:Citrus-sinensis-fruto.jpg",
+      "author": "<a href=\"//commons.wikimedia.org/wiki/User:Luis_Fern%C3%A1ndez_Garc%C3%ADa\" title=\"User:Luis Fernández García\">Luis Fernández García</a>",
+      "license": "CC BY-SA 2.5 es",
+      "source": "https://commons.wikimedia.org/wiki/File:Citrus-sinensis-fruto.jpg"
+    }
+  ],
+  "Clementino Isa": [
+    {
+      "url": "images/products/clementino-isa-1.jpg",
+      "title": "File:Citrus Clementina - panoramio.jpg",
+      "author": "<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20161102070827/http://www.panoramio.com/user/6212428?with_photo_id=129410559\">fotogoocom</a>",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Citrus_Clementina_-_panoramio.jpg"
+    },
+    {
+      "url": "images/products/clementino-isa-2.jpg",
+      "title": "File:Clementines (01014)s.jpg",
+      "author": "<a href=\"//commons.wikimedia.org/wiki/User:Rhododendrites\" title=\"User:Rhododendrites\">Rhododendrites</a>",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Clementines_(01014)s.jpg"
+    }
+  ],
+  "Clementino Hermand": [
+    {
+      "url": "images/products/clementino-hermand-1.jpg",
+      "title": "File:Citrus Clementina - panoramio.jpg",
+      "author": "<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20161102070827/http://www.panoramio.com/user/6212428?with_photo_id=129410559\">fotogoocom</a>",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Citrus_Clementina_-_panoramio.jpg"
+    },
+    {
+      "url": "images/products/clementino-hermand-2.jpg",
+      "title": "File:Clementines (01014)s.jpg",
+      "author": "<a href=\"//commons.wikimedia.org/wiki/User:Rhododendrites\" title=\"User:Rhododendrites\">Rhododendrites</a>",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Clementines_(01014)s.jpg"
+    }
+  ],
+  "Mandarino Marzaiolo": [
+    {
+      "url": "images/products/mandarino-marzaiolo-1.jpg",
+      "title": "File:A Mandarin orange (310650481).jpg",
+      "author": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/16953270@N00\">Filip Maljković</a> from Pancevo, Serbia",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:A_Mandarin_orange_(310650481).jpg"
+    },
+    {
+      "url": "images/products/mandarino-marzaiolo-2.jpg",
+      "title": "File:A Mandarin orange (310650488).jpg",
+      "author": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/16953270@N00\">Filip Maljković</a> from Pancevo, Serbia",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:A_Mandarin_orange_(310650488).jpg"
+    }
+  ],
+  "Mandarino Tardivo": [
+    {
+      "url": "images/products/mandarino-tardivo-1.jpg",
+      "title": "File:Mandarini.jpg",
+      "author": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Conca_d%27_Oro&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Conca d' Oro (page does not exist)\">Conca d' Oro</a>",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mandarini.jpg"
+    },
+    {
+      "url": "images/products/mandarino-tardivo-2.jpg",
+      "title": "File:A Mandarin orange (310650481).jpg",
+      "author": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/16953270@N00\">Filip Maljković</a> from Pancevo, Serbia",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:A_Mandarin_orange_(310650481).jpg"
+    }
+  ],
+  "Kounguat": [
+    {
+      "url": "images/products/kounguat-1.jpg",
+      "title": "File:Citrus-japonica-20080127.JPG",
+      "author": "<a href=\"//commons.wikimedia.org/wiki/User:Miwasatoshi\" title=\"User:Miwasatoshi\">Miwasatoshi</a>",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Citrus-japonica-20080127.JPG"
+    },
+    {
+      "url": "images/products/kounguat-2.jpg",
+      "title": "File:Citrus japonica.jpg",
+      "author": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/53395767@N03\">Phuong  Tran</a>",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Citrus_japonica.jpg"
+    }
+  ],
+  "LemonKounguat": [
+    {
+      "url": "images/products/lemonkounguat-1.jpg",
+      "title": "File:Citrus - Meyer-lemon - Fruits.jpg",
+      "author": "<a href=\"https://de.wikipedia.org/wiki/Benutzer:Genet\" class=\"extiw\" title=\"de:Benutzer:Genet\">Genet</a> (<a href=\"https://de.wikipedia.org/wiki/Benutzer_Diskussion:Genet\" class=\"extiw\" title=\"de:Benutzer Diskussion:Genet\">Diskussion</a>)",
+      "license": "CC BY-SA 3.0 de",
+      "source": "https://commons.wikimedia.org/wiki/File:Citrus_-_Meyer-lemon_-_Fruits.jpg"
+    },
+    {
+      "url": "images/products/lemonkounguat-2.jpg",
+      "title": "File:Citrus - Meyer-lemon - Tree.jpg",
+      "author": "<a href=\"https://de.wikipedia.org/wiki/Benutzer:Genet\" class=\"extiw\" title=\"de:Benutzer:Genet\">Genet</a> (<a href=\"https://de.wikipedia.org/wiki/Benutzer_Diskussion:Genet\" class=\"extiw\" title=\"de:Benutzer Diskussion:Genet\">Diskussion</a>)",
+      "license": "CC BY-SA 3.0 de",
+      "source": "https://commons.wikimedia.org/wiki/File:Citrus_-_Meyer-lemon_-_Tree.jpg"
+    }
+  ],
+  "Kounguat Gigante": [
+    {
+      "url": "images/products/kounguat-gigante-1.jpg",
+      "title": "File:Citrus-japonica-20080127.JPG",
+      "author": "<a href=\"//commons.wikimedia.org/wiki/User:Miwasatoshi\" title=\"User:Miwasatoshi\">Miwasatoshi</a>",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Citrus-japonica-20080127.JPG"
+    },
+    {
+      "url": "images/products/kounguat-gigante-2.jpg",
+      "title": "File:Citrus japonica.jpg",
+      "author": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/53395767@N03\">Phuong  Tran</a>",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Citrus_japonica.jpg"
+    }
+  ],
+  "Lime Taiti": [
+    {
+      "url": "images/products/lime-taiti-1.jpg",
+      "title": "File:(Citrus latifolia) lemon Leaf at Madhurawada.JPG",
+      "author": "<a href=\"//commons.wikimedia.org/wiki/User:Adityamadhav83\" title=\"User:Adityamadhav83\">Adityamadhav83</a>",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:(Citrus_latifolia)_lemon_Leaf_at_Madhurawada.JPG"
+    },
+    {
+      "url": "images/products/lime-taiti-2.jpg",
+      "title": "File:(Citrus latifolia) lemon buds at Madhurawada.JPG",
+      "author": "<a href=\"//commons.wikimedia.org/wiki/User:Adityamadhav83\" title=\"User:Adityamadhav83\">Adityamadhav83</a>",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:(Citrus_latifolia)_lemon_buds_at_Madhurawada.JPG"
+    }
+  ],
   "Lime Singapore": [],
   "Pompelmo Rosa": [],
   "Pompelmo Bianco": [],
   "Pompelmo Rosso": [],
   "Cedro Diamante": [],
-  "Cedro Virettone": [],
-  "Cedro Mano di Buddha": []
+  "Cedro Virettone": [
+    {
+      "url": "images/products/cedro-virettone-1.jpg",
+      "title": "File:\"Buddha's hand\" citron in the Villa Borghese Gardens, Rome.jpg",
+      "author": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Albarubescens&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Albarubescens (page does not exist)\">Albarubescens</a>",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:\"Buddha's_hand\"_citron_in_the_Villa_Borghese_Gardens,_Rome.jpg"
+    },
+    {
+      "url": "images/products/cedro-virettone-2.jpg",
+      "title": "File:20260317 Citrus medica var. sarcodactylis.jpg",
+      "author": "<a href=\"//commons.wikimedia.org/wiki/User:FlocciNivis\" title=\"User:FlocciNivis\">Flocci Nivis</a>",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:20260317_Citrus_medica_var._sarcodactylis.jpg"
+    }
+  ],
+  "Cedro Mano di Buddha": [
+    {
+      "url": "images/products/cedro-mano-di-buddha-1.jpg",
+      "title": "File:\"Buddha's hand\" citron in the Villa Borghese Gardens, Rome.jpg",
+      "author": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Albarubescens&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Albarubescens (page does not exist)\">Albarubescens</a>",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:\"Buddha's_hand\"_citron_in_the_Villa_Borghese_Gardens,_Rome.jpg"
+    },
+    {
+      "url": "images/products/cedro-mano-di-buddha-2.jpg",
+      "title": "File:20260317 Citrus medica var. sarcodactylis.jpg",
+      "author": "<a href=\"//commons.wikimedia.org/wiki/User:FlocciNivis\" title=\"User:FlocciNivis\">Flocci Nivis</a>",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:20260317_Citrus_medica_var._sarcodactylis.jpg"
+    }
+  ]
 }
