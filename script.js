@@ -193,8 +193,8 @@ function renderProducts() {
         <span class="card-category">${p.category.toUpperCase()}</span>
         <h3>${p.name}</h3>
         <div class="card-bottom">
-          <span>Da ${euro(10)}</span>
-          <strong>Scopri i formati <span class="card-arrow">↗</span></strong>
+          <span class="availability-note">Disponibilità da confermare</span>
+          <strong>Chiedi disponibilità <span class="card-arrow">↗</span></strong>
         </div>
       </div>
     </article>`).join("");

@@ -1543,3 +1543,33 @@ body { background: var(--paper); color: #20362a; }
 @media (prefers-reduced-motion: reduce) {
   .floating-whatsapp { transition: none; }
 }
+
+
+/* PRODUCT CARDS — CLEARER SALES ACTION */
+.card-bottom {
+  align-items: flex-end;
+  gap: 10px;
+}
+.availability-note {
+  max-width: 48%;
+  color: #69776a;
+  font-size: 11px;
+  line-height: 1.4;
+}
+.card-bottom strong {
+  color: #17432f;
+  font-size: 12px;
+  text-align: right;
+  line-height: 1.4;
+}
+.card-arrow {
+  display: inline-block;
+  transition: transform .2s ease;
+}
+.product-card:hover .card-arrow {
+  transform: translate(3px, -2px);
+}
+@media (max-width: 420px) {
+  .availability-note { font-size: 10px; }
+  .card-bottom strong { font-size: 11px; }
+}
