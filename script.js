@@ -157,13 +157,19 @@ function renderFilters() {
 }
 
 function plantArt(category) {
-  const fruit = ["Limoni","Arance","Clementini","Mandarini","Kumquat","Pompelmi","Cedri"].includes(category);
-  return `<div class="plant-symbol" aria-hidden="true">
-    <span class="stem"></span><span class="leaf l1"></span>
-    <span class="leaf l2"></span><span class="leaf l3"></span>
-    <span class="leaf l4"></span>
-    ${fruit ? '<span class="fruit f1"></span><span class="fruit f2"></span>' : ""}
-    <span class="pot"></span></div>`;
+  const files = {
+    "Limoni": "limoni.jpg",
+    "Arance": "arance.jpg",
+    "Clementini": "clementini.jpg",
+    "Mandarini": "mandarini.jpg",
+    "Kumquat": "kumquat.jpg",
+    "Lime": "lime.jpg",
+    "Pompelmi": "pompelmi.jpg",
+    "Cedri": "cedri.jpg"
+  };
+  const file = files[category];
+  if (!file) return '<div class="plant-symbol" aria-hidden="true"></div>';
+  return `<img class="catalog-photo" src="images/site/${file}" alt="${category}" loading="lazy" onerror="this.style.display='none'">`;
 }
 
 function renderProducts() {

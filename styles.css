@@ -362,3 +362,16 @@
 @media(hover:none) and (pointer:coarse) and (orientation:landscape){
   dialog.product-dialog[open] .dialog-visual{display:block!important;height:180px!important;min-height:180px!important}
 }
+
+
+/* Fotografie reali per homepage e schede del catalogo */
+.hero-photo{position:relative;overflow:hidden;background:#e8eadb}
+.hero-photo .hero-photo-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(23,55,40,.18));pointer-events:none}
+.hero-photo .art-label,.hero-photo .art-caption{z-index:2}
+.product-visual{position:relative;overflow:hidden}
+.product-visual .catalog-photo{display:block;width:100%;height:100%;min-height:180px;object-fit:cover;object-position:center}
+.product-visual .product-badge,.product-visual .favorite-btn{z-index:3}
+@media(max-width:700px){
+  .product-visual .catalog-photo{min-height:160px}
+}
