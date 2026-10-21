@@ -255,3 +255,64 @@
     background: #fff;
   }
 }
+
+/* Override robusto per iPad touch in orizzontale */
+@media (hover: none) and (pointer: coarse) and (orientation: landscape) {
+  dialog.product-dialog[open] {
+    position: fixed !important;
+    inset: 50% auto auto 50% !important;
+    transform: translate(-50%, -50%) !important;
+    display: block !important;
+    width: min(560px, 92vw) !important;
+    max-width: 92vw !important;
+    height: auto !important;
+    max-height: 88vh !important;
+    max-height: 88dvh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    box-sizing: border-box !important;
+    border-radius: 22px !important;
+  }
+
+  dialog.product-dialog[open] .dialog-visual {
+    display: none !important;
+  }
+
+  dialog.product-dialog[open] .dialog-content {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 30px 26px 24px !important;
+    box-sizing: border-box !important;
+  }
+
+  dialog.product-dialog[open] .dialog-content h2 {
+    font-size: 29px !important;
+    line-height: 1.15 !important;
+    margin: 8px 0 12px !important;
+  }
+
+  dialog.product-dialog[open] .dialog-desc {
+    margin-bottom: 14px !important;
+  }
+
+  dialog.product-dialog[open] > form {
+    position: absolute !important;
+    top: 8px !important;
+    right: 8px !important;
+    width: 44px !important;
+    height: 44px !important;
+    z-index: 100 !important;
+  }
+
+  dialog.product-dialog[open] .dialog-close {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 44px !important;
+    height: 44px !important;
+    z-index: 101 !important;
+  }
+}
