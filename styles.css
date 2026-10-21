@@ -1192,3 +1192,128 @@ body {
     animation-iteration-count: 1 !important;
   }
 }
+
+
+/* Restyling immersivo — Vivaio Siracusa */
+:root {
+  --forest: #183f2e;
+  --deep: #102f23;
+  --leaf: #8ba36b;
+  --cream: #f5f0e4;
+  --paper: #fffdf7;
+  --terracotta: #b96e49;
+}
+html { scroll-behavior: smooth; scroll-padding-top: 28px; }
+body { background: var(--paper); }
+.site-header {
+  background: rgba(255,253,247,.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(24,63,46,.1);
+}
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 82% 22%, rgba(191,207,167,.52), transparent 38%),
+    linear-gradient(130deg, #faf7ed 0%, #eff0df 55%, #e7e8d5 100%);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 360px; height: 360px;
+  right: 30%; top: -210px;
+  border: 1px solid rgba(24,63,46,.10);
+  border-radius: 50%;
+  box-shadow: 0 0 0 35px rgba(24,63,46,.025),
+              0 0 0 75px rgba(24,63,46,.02);
+  animation: botanical-orbit 24s linear infinite;
+}
+.hero-copy > * {
+  animation: reveal-up .85s cubic-bezier(.2,.7,.2,1) both;
+}
+.hero-copy .eyebrow { animation-delay: .08s; }
+.hero-copy h1 { animation-delay: .18s; }
+.hero-copy > p { animation-delay: .28s; }
+.hero-copy .primary-cta { animation-delay: .38s; }
+.hero-copy .hero-note { animation-delay: .48s; }
+.hero-art.hero-photo {
+  overflow: hidden;
+  border-radius: 46% 46% 28px 28px;
+  box-shadow: 0 28px 70px rgba(25,55,35,.18);
+  animation: hero-arrive 1.15s cubic-bezier(.16,1,.3,1) both;
+}
+.hero-photo-image {
+  transition: transform 1.1s cubic-bezier(.2,.7,.2,1), filter .6s ease;
+}
+.hero-art:hover .hero-photo-image { transform: scale(1.045); }
+.art-label, .art-caption { text-shadow: 0 1px 10px rgba(0,0,0,.22); }
+.primary-cta, .header-cta, .whatsapp-cta {
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+  box-shadow: 0 10px 28px rgba(24,63,46,.13);
+}
+.primary-cta:hover, .header-cta:hover, .whatsapp-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 34px rgba(24,63,46,.2);
+}
+.trust-strip { background: #fffdf7; }
+.trust-strip > div { transition: transform .25s ease; }
+.trust-strip > div:hover { transform: translateY(-3px); }
+.catalog-section { background: #fffdf7; }
+.section-heading h2 { text-wrap: balance; }
+.search-box:focus-within {
+  border-color: #8ba36b;
+  box-shadow: 0 0 0 4px rgba(139,163,107,.15);
+}
+.product-card {
+  border: 1px solid rgba(24,63,46,.10);
+  box-shadow: 0 5px 18px rgba(24,63,46,.045);
+  transition: transform .35s cubic-bezier(.2,.7,.2,1),
+              box-shadow .35s ease, border-color .35s ease;
+}
+.product-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(139,163,107,.55);
+  box-shadow: 0 20px 40px rgba(24,63,46,.12);
+}
+.product-visual { overflow: hidden; }
+.product-visual img {
+  transition: transform .6s cubic-bezier(.2,.7,.2,1);
+}
+.product-card:hover .product-visual img { transform: scale(1.055); }
+.order-banner {
+  background:
+    radial-gradient(ellipse at 92% 0%, rgba(190,207,165,.42), transparent 42%),
+    linear-gradient(120deg, #f5f0e4, #fbf8ef);
+  border: 1px solid rgba(24,63,46,.09);
+}
+.product-dialog {
+  box-shadow: 0 30px 100px rgba(9,30,20,.28);
+}
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes hero-arrive {
+  from { opacity: 0; transform: translateY(22px) scale(.975); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes botanical-orbit {
+  to { transform: rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@media (max-width: 700px) {
+  .hero::before { right: -150px; width: 260px; height: 260px; }
+  .hero-art.hero-photo { border-radius: 44% 44% 22px 22px; }
+  .product-card:hover { transform: none; }
+}
