@@ -51,67 +51,28 @@ async function loadProductPhotos(product) {
   galleryImage.hidden = true;
   galleryImage.removeAttribute("src");
   galleryPlaceholder.hidden = false;
-  galleryPlaceholder.textContent = "Ricerca delle foto in corso…";
+  galleryPlaceholder.textContent = "Caricamento foto…";
   galleryCount.textContent = "";
   galleryPrev.hidden = true;
   galleryNext.hidden = true;
 
-  const species = [
-    [/^Limone/i, "Citrus limon"],
-    [/^Arancio/i, "Citrus sinensis"],
-    [/^Clementino/i, "Citrus clementina"],
-    [/^Mandarino/i, "Citrus reticulata"],
-    [/^LemonKounguat/i, "Citrus meyeri"],
-    [/^Kounguat/i, "Citrus japonica"],
-    [/^Lime/i, "Citrus aurantiifolia"],
-    [/^Pompelmo/i, "Citrus paradisi"],
-    [/^Cedro/i, "Citrus medica"]
-  ];
-  const match = species.find(([pattern]) => pattern.test(product.name));
-  const query = match ? match[1] : "Citrus";
-
   try {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 12000);
-    let response;
-    try {
-      const endpoint = "https://commons.wikimedia.org/w/api.php?action=query"
-        + "&generator=search&gsrnamespace=6&gsrlimit=10"
-        + "&gsrsearch=" + encodeURIComponent(query)
-        + "&prop=imageinfo&iiprop=url&iiurlwidth=1000"
-        + "&format=json&origin=*";
-      response = await fetch(endpoint, {
-        signal: controller.signal,
-        mode: "cors"
-      });
-    } finally {
-      clearTimeout(timeout);
+    if (!window.productPhotoCatalog) {
+      const response = await fetch("images/product-photos.json");
+      if (!response.ok) throw new Error("Catalogo foto non disponibile");
+      window.productPhotoCatalog = await response.json();
     }
-
-    if (!response.ok) throw new Error("Ricerca non disponibile");
-    const data = await response.json();
     if (request !== galleryRequest) return;
-
-    galleryImages = Object.values(data.query?.pages || {})
-      .map(page => {
-        const info = page.imageinfo?.[0];
-        const url = info?.thumburl || info?.url;
-        if (!url || !/^https?:/.test(url)) return null;
-        if (!/\.(jpe?g|png|webp)(\?|$)/i.test(url)) return null;
-        return { url, title: page.title || "" };
-      })
-      .filter(Boolean);
+    galleryImages = window.productPhotoCatalog[product.name] || [];
 
     if (!galleryImages.length) {
-      galleryPlaceholder.textContent = "Nessuna foto trovata. Prova un'altra varietà.";
+      galleryPlaceholder.textContent = "Foto JPG non ancora disponibili per questa varietà.";
       return;
     }
     showGalleryImage();
   } catch (error) {
     if (request === galleryRequest) {
-      galleryPlaceholder.textContent = error.name === "AbortError"
-        ? "La ricerca è scaduta. Riapri il prodotto per riprovare."
-        : "Ricerca foto non disponibile. Controlla la connessione e riprova.";
+      galleryPlaceholder.textContent = "Impossibile caricare le foto. Riprova più tardi.";
     }
   }
 }
