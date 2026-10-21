@@ -1,13 +1,18 @@
-// Evita che Safari riapra il sito a metà pagina o direttamente nel catalogo.
+// Su una nuova apertura o ricarica, parti sempre dalla home.
 if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
 }
-if (window.location.hash === "#catalogo") {
-  history.replaceState(null, "", window.location.pathname + window.location.search);
+
+function resetHomePosition() {
+  if (window.location.hash === "#catalogo") {
+    history.replaceState(null, "", window.location.pathname + window.location.search);
+  }
+  window.scrollTo({ top: 0, left: 0, behavior: "instant" });
 }
-if (window.location.hash === "" || window.location.hash === "#catalogo") {
-  window.scrollTo(0, 0);
-}
+
+resetHomePosition();
+window.addEventListener("load", resetHomePosition);
+window.addEventListener("pageshow", resetHomePosition);
 
 const PHONE = "393925286921";
 const sizes = [
