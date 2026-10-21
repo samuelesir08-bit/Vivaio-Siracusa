@@ -1,3 +1,14 @@
+// Evita che Safari riapra il sito a metà pagina o direttamente nel catalogo.
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+if (window.location.hash === "#catalogo") {
+  history.replaceState(null, "", window.location.pathname + window.location.search);
+}
+if (window.location.hash === "" || window.location.hash === "#catalogo") {
+  window.scrollTo(0, 0);
+}
+
 const PHONE = "393925286921";
 const sizes = [
   { label: "Vaso 10", price: 10 },
