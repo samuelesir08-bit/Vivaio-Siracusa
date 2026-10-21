@@ -480,3 +480,33 @@
     box-sizing: border-box;
   }
 }
+
+
+/* Identità visiva Vivaio Siracusa */
+.brand-logo {
+  display: block;
+  width: clamp(220px, 27vw, 310px);
+  height: auto;
+  max-height: 70px;
+  object-fit: contain;
+  object-position: left center;
+}
+.site-header {
+  min-height: 86px;
+}
+@media (max-width: 600px) {
+  .site-header {
+    min-height: 72px;
+    height: auto;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+  .brand-logo {
+    width: clamp(180px, 53vw, 250px);
+    max-height: 54px;
+  }
+  .header-cta {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+}

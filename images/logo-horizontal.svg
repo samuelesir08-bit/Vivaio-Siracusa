@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 112">
+  <defs>
+    <linearGradient id="fruit" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6d35e"/>
+      <stop offset="1" stop-color="#d99a20"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(8 5)">
+    <circle cx="49" cy="51" r="45" fill="#f3f0e3" stroke="#d6dfc8" stroke-width="1.5"/>
+    <path d="M47 77 Q47 47 63 19" fill="none" stroke="#214a35" stroke-width="4" stroke-linecap="round"/>
+    <path d="M52 43 Q17 42 19 19 Q43 17 52 43Z" fill="#64855a" stroke="#214a35" stroke-width="1.5"/>
+    <path d="M56 31 Q64 4 86 12 Q83 33 56 31Z" fill="#789568" stroke="#214a35" stroke-width="1.5"/>
+    <path d="M48 58 Q20 51 18 70 Q37 83 48 58Z" fill="#789568" stroke="#214a35" stroke-width="1.5"/>
+    <path d="M57 56 Q83 38 91 57 Q80 76 57 56Z" fill="#64855a" stroke="#214a35" stroke-width="1.5"/>
+    <path d="M51 43 Q40 35 39 26 Q53 28 57 40Z" fill="#fffdf5" stroke="#d7d8c4" stroke-width="1"/>
+    <circle cx="43" cy="64" r="15" fill="url(#fruit)" stroke="#b77c21" stroke-width="1.5"/>
+    <path d="M40 49 Q43 44 49 46" fill="none" stroke="#214a35" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="43" cy="64" r="2" fill="#f9e8a2"/>
+  </g>
+  <text x="112" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="37" font-weight="bold" fill="#173728">Vivaio <tspan fill="#69845e">Siracusa</tspan></text>
+  <path d="M114 65 H145 M397 65 H425" stroke="#d6a53b" stroke-width="1.5"/>
+  <text x="160" y="70" font-family="Arial, sans-serif" font-size="10" letter-spacing="2.5" fill="#526b4c">AGRUMI E PIANTE IN VASO</text>
+</svg>
