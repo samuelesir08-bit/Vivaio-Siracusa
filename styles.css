@@ -316,3 +316,34 @@
     z-index: 101 !important;
   }
 }
+
+/* Ripristina l'immagine nella finestra prodotto su iPad */
+@media (hover: none) and (pointer: coarse) and (orientation: landscape) {
+  dialog.product-dialog[open] .dialog-visual {
+    display: flex !important;
+    position: relative !important;
+    width: 100% !important;
+    height: 145px !important;
+    min-height: 145px !important;
+    overflow: hidden !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  dialog.product-dialog[open] .dialog-content {
+    padding: 22px 26px 24px !important;
+  }
+
+  dialog.product-dialog[open] .dialog-category {
+    top: 12px !important;
+    left: 18px !important;
+  }
+
+  dialog.product-dialog[open] .dialog-leaf {
+    font-size: 58px !important;
+  }
+
+  dialog.product-dialog[open] .dialog-stem {
+    transform: scale(.65) !important;
+  }
+}
