@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 126">
+<g transform="translate(8 5)">
+  <circle cx="55" cy="57" r="52" fill="#f5f2e7" stroke="#dce2d1" stroke-width="1.5"/>
+  <path d="M54 96 Q49 61 72 24" fill="none" stroke="#214a35" stroke-width="4" stroke-linecap="round"/>
+  <path d="M58 55 Q17 52 21 25 Q48 24 58 55Z" fill="#6c8b5c" stroke="#214a35" stroke-width="1.5"/>
+  <path d="M66 40 Q77 8 101 19 Q96 44 66 40Z" fill="#8aa477" stroke="#214a35" stroke-width="1.5"/>
+  <path d="M51 71 Q17 61 15 82 Q37 98 51 71Z" fill="#7c9869" stroke="#214a35" stroke-width="1.5"/>
+  <path d="M65 65 Q96 43 103 65 Q87 85 65 65Z" fill="#6c8b5c" stroke="#214a35" stroke-width="1.5"/>
+  <ellipse cx="42" cy="75" rx="16" ry="20" transform="rotate(-24 42 75)" fill="#efbd39" stroke="#d59b27" stroke-width="1.5"/>
+  <path d="M40 56 Q45 51 51 56" fill="none" stroke="#426f43" stroke-width="4" stroke-linecap="round"/>
+  <g transform="translate(60 52)">
+    <ellipse rx="7" ry="13" cy="-8" fill="#fffdf5" stroke="#d9d9c9"/>
+    <ellipse rx="7" ry="13" cy="-8" transform="rotate(72)" fill="#fffdf5" stroke="#d9d9c9"/>
+    <ellipse rx="7" ry="13" cy="-8" transform="rotate(144)" fill="#fffdf5" stroke="#d9d9c9"/>
+    <ellipse rx="7" ry="13" cy="-8" transform="rotate(216)" fill="#fffdf5" stroke="#d9d9c9"/>
+    <ellipse rx="7" ry="13" cy="-8" transform="rotate(288)" fill="#fffdf5" stroke="#d9d9c9"/>
+    <circle r="4" fill="#e5b43a"/>
+  </g>
+</g>
+<text x="130" y="58" font-family="Georgia,serif" font-size="43" font-weight="bold" letter-spacing="-1.8" fill="#173728">Vivaio <tspan fill="#70895b">Siracusa</tspan></text>
+<path d="M132 75 H170 M441 75 H466" stroke="#d6a53b" stroke-width="1.5"/>
+<text x="181" y="80" font-family="Arial,sans-serif" font-size="10" letter-spacing="3" fill="#526b4c">AGRUMI E PIANTE IN VASO</text>
+</svg>
