@@ -783,3 +783,51 @@
     z-index: 20 !important;
   }
 }
+
+/* Logo originale nell'intestazione e nel footer */
+.brand-logo {
+  display: block;
+  width: clamp(210px, 32vw, 360px);
+  height: auto;
+  max-height: 86px;
+  object-fit: contain;
+  object-position: left center;
+}
+.footer-logo {
+  width: min(300px, 80vw);
+  max-height: 78px;
+}
+@media (max-width: 700px) {
+  .brand-logo {
+    width: min(66vw, 280px);
+    max-height: 60px;
+  }
+  .footer-logo {
+    width: min(260px, 80vw);
+    max-height: 70px;
+  }
+}
+
+/* Logo originale nell'intestazione e nel footer */
+.brand-logo {
+  display: block;
+  width: clamp(210px, 32vw, 360px);
+  height: auto;
+  max-height: 86px;
+  object-fit: contain;
+  object-position: left center;
+}
+.footer-logo {
+  width: min(300px, 80vw);
+  max-height: 78px;
+}
+@media (max-width: 700px) {
+  .brand-logo {
+    width: min(66vw, 280px);
+    max-height: 60px;
+  }
+  .footer-logo {
+    width: min(260px, 80vw);
+    max-height: 70px;
+  }
+}
