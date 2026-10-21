@@ -510,3 +510,276 @@
     white-space: nowrap;
   }
 }
+
+
+/* === Restyling Vivaio Siracusa === */
+:root {
+  --forest: #183f2e;
+  --deep: #123326;
+  --leaf: #789064;
+  --cream: #f5f1e5;
+  --paper: #fffdf7;
+  --gold: #e4b33d;
+  --ink: #23372b;
+  --muted: #788174;
+  --line: #e4e4d8;
+  --radius: 22px;
+}
+.site-header {
+  position: relative;
+  z-index: 30;
+  min-height: 88px;
+  height: auto;
+  background: rgba(255,253,247,.97);
+  border-bottom: 1px solid var(--line);
+}
+.brand-logo {
+  width: clamp(235px, 30vw, 340px);
+  max-height: 78px;
+}
+.header-cta {
+  padding: 13px 18px;
+  border-radius: 999px;
+  background: var(--forest);
+  color: white;
+  transition: background .2s, transform .2s;
+}
+.header-cta:hover {
+  background: var(--deep);
+  transform: translateY(-1px);
+}
+.hero {
+  position: relative;
+  gap: clamp(24px, 4vw, 64px);
+  min-height: 560px;
+  padding-top: clamp(42px, 5vw, 72px);
+  padding-bottom: clamp(42px, 5vw, 72px);
+  background:
+    radial-gradient(ellipse at 76% 40%, rgba(219,226,202,.45), transparent 45%),
+    var(--cream);
+}
+.hero-copy { position: relative; z-index: 2; }
+.hero-copy > p { font-size: 16px; line-height: 1.85; }
+.hero-art.hero-photo {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  min-height: 430px;
+  aspect-ratio: 1 / 1.03;
+  border-radius: 48% 48% 24px 24px;
+  overflow: hidden;
+  background: #e5e9d8;
+  box-shadow: 0 22px 55px rgba(30,56,38,.09);
+}
+.hero-photo .hero-photo-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.hero-photo .art-label {
+  position: absolute;
+  top: 12%;
+  left: 10%;
+  z-index: 2;
+  color: #244d37;
+  font-size: 9px;
+  letter-spacing: 1.8px;
+  line-height: 1.9;
+}
+.hero-photo .art-caption {
+  position: absolute;
+  bottom: 18px;
+  left: 8%;
+  right: 8%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: white;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-shadow: 0 1px 5px #17372899;
+}
+.primary-cta {
+  padding: 16px 24px;
+  box-shadow: 0 8px 20px rgba(24,63,46,.1);
+}
+.product-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 2px 0 rgba(23,55,40,.015);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(23,55,40,.09);
+}
+.product-visual {
+  position: relative;
+  overflow: hidden;
+  background: #e8eadb;
+}
+.product-visual .catalog-photo {
+  display: block !important;
+  width: 100%;
+  height: 100%;
+  min-height: 0 !important;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+.product-card:hover .catalog-photo { transform: scale(1.035); }
+.product-badge {
+  background: rgba(255,253,247,.94);
+  border: 1px solid rgba(255,255,255,.7);
+}
+.favorite-btn {
+  box-shadow: 0 3px 12px rgba(20,50,34,.09);
+}
+.card-info { padding: 19px 20px 17px; }
+.card-info h3 {
+  font-size: clamp(18px, 1.6vw, 23px);
+  line-height: 1.2;
+  margin-top: 10px;
+}
+.card-bottom {
+  padding-top: 15px;
+  margin-top: 20px;
+  border-top: 1px solid #ecece4;
+}
+.product-dialog {
+  border: 1px solid rgba(255,255,255,.65);
+  box-shadow: 0 24px 90px rgba(12,34,23,.24);
+}
+.dialog-content { padding: clamp(22px, 3vw, 38px); }
+.dialog-content h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.08;
+  margin: 14px 0 16px;
+}
+.dialog-order {
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+.gallery-arrow {
+  width: 44px;
+  height: 44px;
+  color: var(--forest);
+  background: rgba(255,253,247,.96);
+}
+.gallery-count {
+  padding: 7px 12px;
+  font-size: 11px;
+  backdrop-filter: blur(8px);
+}
+#catalogo { scroll-margin-top: 24px; }
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
+    padding-left: 5vw;
+    padding-right: 5vw;
+    gap: 26px;
+    min-height: 490px;
+  }
+  .hero-art.hero-photo { min-height: 340px; }
+  .brand-logo { width: clamp(210px, 32vw, 285px); }
+}
+@media (max-width: 700px) {
+  .site-header {
+    min-height: 72px;
+    padding: 10px 15px;
+    gap: 10px;
+  }
+  .brand-logo {
+    width: clamp(175px, 54vw, 230px);
+    max-height: 54px;
+  }
+  .header-cta {
+    padding: 10px 12px;
+    font-size: 10px;
+  }
+  .hero {
+    grid-template-columns: minmax(0,1fr);
+    padding: 38px 20px 30px;
+    gap: 28px;
+    min-height: 0;
+  }
+  .hero h1 {
+    font-size: clamp(43px, 11vw, 62px);
+    line-height: 1.02;
+    margin-top: 20px;
+  }
+  .hero-copy > p { font-size: 14px; }
+  .hero-note { margin-top: 25px; }
+  .hero-art.hero-photo {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 1 / .82;
+    border-radius: 42% 42% 20px 20px;
+  }
+  .product-card { border-radius: 17px; }
+  .product-visual { height: clamp(130px, 38vw, 190px); }
+  .product-visual .catalog-photo {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+  }
+  .card-info { padding: 13px 12px 12px; }
+  .card-info h3 { font-size: 17px; }
+  .card-bottom { margin-top: 14px; padding-top: 12px; }
+  dialog.product-dialog[open] {
+    position: fixed !important;
+    inset: 50% auto auto 50% !important;
+    transform: translate(-50%, -50%) !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: calc(100vw - 24px) !important;
+    max-width: 480px !important;
+    max-height: 90vh !important;
+    max-height: 90dvh !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    box-sizing: border-box !important;
+    border-radius: 20px !important;
+  }
+  dialog.product-dialog[open] .dialog-visual {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    height: 165px !important;
+    min-height: 165px !important;
+    overflow: hidden !important;
+  }
+  dialog.product-dialog[open] .product-gallery {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  dialog.product-dialog[open] .dialog-content {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 22px 19px 24px !important;
+    box-sizing: border-box !important;
+  }
+  dialog.product-dialog[open] .dialog-content h2 {
+    font-size: clamp(27px, 7vw, 34px) !important;
+    overflow-wrap: anywhere;
+  }
+  dialog.product-dialog[open] .dialog-close {
+    position: absolute !important;
+    top: 8px !important;
+    right: 8px !important;
+    z-index: 20 !important;
+  }
+}
