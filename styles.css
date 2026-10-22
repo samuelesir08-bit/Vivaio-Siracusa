@@ -1695,3 +1695,50 @@ body { background: var(--paper); color: #20362a; }
     line-height: 1.45 !important;
   }
 }
+
+
+/* FIX mirato iPad: home con testo e foto separati */
+@media (min-width: 761px) and (max-width: 1100px) {
+  main .hero {
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr) !important;
+    gap: 28px !important;
+    padding: 125px 30px 42px !important;
+    min-height: 0 !important;
+    height: auto !important;
+    overflow: hidden !important;
+  }
+  main .hero > .hero-copy {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    z-index: 3 !important;
+  }
+  main .hero > .hero-art.hero-photo {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 0.78 / 1 !important;
+    margin: 0 !important;
+    z-index: 1 !important;
+  }
+  main .hero h1 {
+    font-size: clamp(40px, 5vw, 58px) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -1.2px !important;
+  }
+  main .hero-copy > p {
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+  }
+}
