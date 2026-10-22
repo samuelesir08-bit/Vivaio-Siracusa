@@ -1,10 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="24" fill="#173728"/>
-  <path d="M47 80 Q48 48 65 18" fill="none" stroke="#e7bd4d" stroke-width="4" stroke-linecap="round"/>
-  <path d="M51 43 Q19 42 19 19 Q43 17 51 43Z" fill="#85a16e"/>
-  <path d="M58 31 Q65 5 87 12 Q83 33 58 31Z" fill="#a9bd87"/>
-  <path d="M48 59 Q20 52 18 71 Q37 83 48 59Z" fill="#69845e"/>
-  <circle cx="43" cy="65" r="17" fill="#f0bf38" stroke="#fff0a9" stroke-width="2"/>
-  <path d="M40 48 Q44 44 49 47" fill="none" stroke="#69845e" stroke-width="4" stroke-linecap="round"/>
-  <path d="M43 56 V74 M34 65 H52" stroke="#fff0a9" stroke-width="1.5" opacity=".8"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <rect width="120" height="120" rx="24" fill="#123728"/>
+  <circle cx="60" cy="60" r="48" fill="#f5f0e4"/>
+  <g transform="translate(5 5) scale(1.0)">
+    <path d="M55 83 Q49 52 69 23" fill="none" stroke="#214a35" stroke-width="4" stroke-linecap="round"/>
+    <path d="M59 52 Q22 49 24 25 Q49 24 59 52Z" fill="#6c8b5c" stroke="#214a35" stroke-width="1.5"/>
+    <path d="M66 39 Q77 10 99 19 Q94 42 66 39Z" fill="#8aa477" stroke="#214a35" stroke-width="1.5"/>
+    <path d="M53 68 Q22 60 20 80 Q40 95 53 68Z" fill="#7c9869" stroke="#214a35" stroke-width="1.5"/>
+    <path d="M64 63 Q92 43 100 64 Q84 83 64 63Z" fill="#6c8b5c" stroke="#214a35" stroke-width="1.5"/>
+    <ellipse cx="43" cy="74" rx="15" ry="19" transform="rotate(-24 43 74)" fill="#efbd39" stroke="#d59b27" stroke-width="1.5"/>
+    <path d="M41 55 Q46 51 51 55" fill="none" stroke="#426f43" stroke-width="4" stroke-linecap="round"/>
+    <g transform="translate(61 51)">
+      <ellipse rx="5.5" ry="10" cy="-6" fill="#fffdf5" stroke="#d9d9c9"/>
+      <ellipse rx="5.5" ry="10" cy="-6" transform="rotate(72)" fill="#fffdf5" stroke="#d9d9c9"/>
+      <ellipse rx="5.5" ry="10" cy="-6" transform="rotate(144)" fill="#fffdf5" stroke="#d9d9c9"/>
+      <ellipse rx="5.5" ry="10" cy="-6" transform="rotate(216)" fill="#fffdf5" stroke="#d9d9c9"/>
+      <ellipse rx="5.5" ry="10" cy="-6" transform="rotate(288)" fill="#fffdf5" stroke="#d9d9c9"/>
+      <circle r="3.5" fill="#e5b43a"/>
+    </g>
+  </g>
 </svg>
