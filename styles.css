@@ -1630,3 +1630,68 @@ body { background: var(--paper); color: #20362a; }
     aspect-ratio: 0.82 / 1 !important;
   }
 }
+
+/* FIX DEFINITIVO HOME IPAD: testo e foto in colonne separate */
+@media (min-width: 761px) and (max-width: 1200px) {
+  main .hero {
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr) !important;
+    grid-template-rows: auto !important;
+    column-gap: clamp(20px, 3vw, 36px) !important;
+    align-items: center !important;
+    min-height: 680px !important;
+    height: auto !important;
+    padding: 125px 32px 48px !important;
+    overflow: hidden !important;
+  }
+
+  main .hero > .hero-copy {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    z-index: 3 !important;
+  }
+
+  main .hero > .hero-art.hero-photo {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    position: relative !important;
+    inset: auto !important;
+    justify-self: stretch !important;
+    align-self: center !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 0.78 / 1 !important;
+    margin: 0 !important;
+    z-index: 1 !important;
+  }
+
+  main .hero h1 {
+    max-width: 100% !important;
+    font-size: clamp(42px, 5.2vw, 62px) !important;
+    line-height: 1 !important;
+    letter-spacing: -1.5px !important;
+    overflow-wrap: normal !important;
+  }
+
+  main .hero-copy > p {
+    max-width: 100% !important;
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+  }
+
+  main .hero-note {
+    align-items: flex-start !important;
+    margin-top: 24px !important;
+  }
+
+  main .hero-note small {
+    line-height: 1.45 !important;
+  }
+}
