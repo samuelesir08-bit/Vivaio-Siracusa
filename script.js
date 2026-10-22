@@ -1,4 +1,4 @@
-// Su una nuova apertura o ricarica, parti sempre dalla home.
+// Gestisce il ripristino dello scroll di Safari su iPhone e iPad.
 if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
 }
@@ -7,12 +7,19 @@ function resetHomePosition() {
   if (window.location.hash === "#catalogo") {
     history.replaceState(null, "", window.location.pathname + window.location.search);
   }
-  window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  window.scrollTo(0, 0);
+  requestAnimationFrame(() => window.scrollTo(0, 0));
 }
 
-resetHomePosition();
-window.addEventListener("load", resetHomePosition);
-window.addEventListener("pageshow", resetHomePosition);
+function resetAfterSafariRestore() {
+  resetHomePosition();
+  setTimeout(resetHomePosition, 100);
+  setTimeout(resetHomePosition, 400);
+}
+
+resetAfterSafariRestore();
+window.addEventListener("load", resetAfterSafariRestore);
+window.addEventListener("pageshow", resetAfterSafariRestore);
 
 const PHONE = "393925286921";
 const sizes = [
