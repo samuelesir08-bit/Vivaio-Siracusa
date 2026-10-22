@@ -1573,3 +1573,60 @@ body { background: var(--paper); color: #20362a; }
   .availability-note { font-size: 10px; }
   .card-bottom strong { font-size: 11px; }
 }
+
+/* FIX: separa la scritta dalla foto nella home */
+@media (min-width: 761px) {
+  .hero {
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr) !important;
+    align-items: center !important;
+    gap: clamp(28px, 4vw, 64px) !important;
+    padding-left: clamp(36px, 6vw, 100px) !important;
+    padding-right: clamp(36px, 6vw, 100px) !important;
+    min-height: 700px !important;
+    overflow: hidden !important;
+  }
+
+  .hero-copy {
+    grid-column: 1 !important;
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    max-width: 620px !important;
+    min-width: 0 !important;
+  }
+
+  .hero-art.hero-photo {
+    grid-column: 2 !important;
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    max-width: 680px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 0.88 / 1 !important;
+    margin: 0 !important;
+    justify-self: end !important;
+    z-index: 1 !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(52px, 5.5vw, 88px) !important;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1000px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: 24px !important;
+    padding-top: 120px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 5.5vw, 64px) !important;
+  }
+
+  .hero-art.hero-photo {
+    aspect-ratio: 0.82 / 1 !important;
+  }
+}
