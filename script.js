@@ -187,10 +187,10 @@ function plantArt(product) {
 
   const slug = aliases[product.name] ||
     product.name.normalize("NFD")
-      .replace(/[\\u0300-\\u036f]/g, "")
+      .replace(/[\u0300-\u036f]/g, "")
       .toLowerCase()
       .trim()
-      .replace(/\\s+/g, "-");
+      .replace(/\s+/g, "-");
 
   return `<img class="catalog-photo"
     src="images/varieties/${slug}.PNG"
