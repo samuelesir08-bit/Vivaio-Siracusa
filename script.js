@@ -179,20 +179,24 @@ function renderFilters() {
   });
 }
 
-function plantArt(category) {
-  const files = {
-    "Limoni": "limoni.jpg",
-    "Arance": "arance.jpg",
-    "Clementini": "clementini.jpg",
-    "Mandarini": "mandarini.jpg",
-    "Kumquat": "kumquat.jpg",
-    "Lime": "lime.jpg",
-    "Pompelmi": "pompelmi.jpg",
-    "Cedri": "cedri.jpg"
+function plantArt(product) {
+  const aliases = {
+    "LemonKounguat": "lemon-kounguat",
+    "Lime Taiti": "lime-tahiti"
   };
-  const file = files[category];
-  if (!file) return '<div class="plant-symbol" aria-hidden="true"></div>';
-  return `<img class="catalog-photo" src="images/site/${file}" alt="${category}" loading="lazy" onerror="this.style.display='none'">`;
+
+  const slug = aliases[product.name] ||
+    product.name.normalize("NFD")
+      .replace(/[\\u0300-\\u036f]/g, "")
+      .toLowerCase()
+      .trim()
+      .replace(/\\s+/g, "-");
+
+  return `<img class="catalog-photo"
+    src="images/varieties/${slug}.PNG"
+    alt="${product.name}"
+    loading="lazy"
+    onerror="this.style.display='none'">`;
 }
 
 function renderProducts() {
@@ -210,7 +214,7 @@ function renderProducts() {
     <article class="product-card" tabindex="0" role="button"
       aria-label="Dettagli ${p.name}" data-id="${p.id}">
       <div class="product-visual" style="--visual:${categoryColors[p.category] || "#e9edda"}">
-        <span class="product-badge">${p.category.toUpperCase()}</span><button class="favorite-btn ${favorites.has(p.id) ? "is-favorite" : ""}" type="button" data-favorite="${p.id}" aria-label="Preferiti" aria-pressed="${favorites.has(p.id)}">${favorites.has(p.id) ? "♥" : "♡"}</button>${plantArt(p.category)}
+        <span class="product-badge">${p.category.toUpperCase()}</span><button class="favorite-btn ${favorites.has(p.id) ? "is-favorite" : ""}" type="button" data-favorite="${p.id}" aria-label="Preferiti" aria-pressed="${favorites.has(p.id)}">${favorites.has(p.id) ? "♥" : "♡"}</button>${plantArt(p)}
       </div>
       <div class="card-info">
         <span class="card-category">${p.category.toUpperCase()}</span>
