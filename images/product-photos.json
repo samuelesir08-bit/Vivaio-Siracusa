@@ -294,6 +294,13 @@
       "license": "Licenza da verificare prima dell'uso commerciale",
       "source": "https://www.beccariapiante.com/prodotto/clementino/",
       "note": "Immagine generica di clementino; non prova la cultivar ISA"
+    },
+    {
+      "url": "https://www.savinivivai.it/it/images/400x400/11201465-1-isa_1.jpg",
+      "title": "Clementino ISA – fotografia di pianta/frutti",
+      "author": "Savini Vivai",
+      "license": "Licenza da verificare prima dell'uso commerciale",
+      "source": "https://www.savinivivai.it/it/shop/pianta-di-clementino-isa-in-vaso-42-cm.html"
     }
   ],
   "Clementino Hermand": [
@@ -592,7 +599,29 @@
       "source": "https://agrumilenzi.it/wp-content/uploads/2016/04/cedro-di-Diamante-scaled.jpg"
     }
   ],
-  "Cedro Virettone": [],
+  "Cedro Virettone": [
+    {
+      "url": "https://www.savinivivai.it/it/images/400x400/11200055-1-cedro-gigante.jpg",
+      "title": "Cedro (Citrus medica), foto botanica di riferimento; cultivar Virettone non confermata",
+      "author": "Savini Vivai",
+      "license": "Licenza da verificare prima dell'uso commerciale",
+      "source": "https://www.savinivivai.it/it/shop/pianta-di-cedro-gigante-in-vaso-20-22-cm.html"
+    },
+    {
+      "url": "https://www.savinivivai.it/it/images/400x400/11200055-2-cedro-gigante.jpg",
+      "title": "Cedro (Citrus medica), foto botanica di riferimento; cultivar Virettone non confermata",
+      "author": "Savini Vivai",
+      "license": "Licenza da verificare prima dell'uso commerciale",
+      "source": "https://www.savinivivai.it/it/shop/pianta-di-cedro-gigante-in-vaso-20-22-cm.html"
+    },
+    {
+      "url": "https://www.savinivivai.it/it/images/400x400/11200055-3-cedro-gigante.jpg",
+      "title": "Cedro (Citrus medica), foto botanica di riferimento; cultivar Virettone non confermata",
+      "author": "Savini Vivai",
+      "license": "Licenza da verificare prima dell'uso commerciale",
+      "source": "https://www.savinivivai.it/it/shop/pianta-di-cedro-gigante-in-vaso-20-22-cm.html"
+    }
+  ],
   "Cedro Mano di Buddha": [
     {
       "url": "http://everglades.farm/cdn/shop/products/buddhas-hand-tree_everglades_farm.jpg?v=1762198412",
