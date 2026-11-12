@@ -50,9 +50,10 @@ SEARCHES = {
     "Cedro Virettone": (["Virettone citron Citrus medica"], ["Citrus medica citron fruit tree"]),
     "Cedro Mano di Buddha": (["Buddha hand citron Citrus medica"], ["Citrus medica sarcodactylis fruit tree"]),
 }
-HEADERS = {"User-Agent": "AziendaSiracusaPhotoPack/1.0 (catalogue image research)"}
+HEADERS = {"User-Agent": "AziendaSiracusaPhotoPack/1.1 (+https://github.com/samuelesir08-bit/Vivaio-Siracusa; catalogue image research)"}
 session = requests.Session()
 session.headers.update(HEADERS)
+last_commons_request = 0.0
 
 def clean_html(value):
     return re.sub(r"<[^>]+>", " ", str(value or "")).replace("&nbsp;", " ").strip()
@@ -74,21 +75,36 @@ def accepted_commons_license(ext):
     )
 
 def commons_results(query):
-    try:
-        params = {
-            "action": "query", "format": "json", "generator": "search",
-            "gsrsearch": f'filetype:bitmap "{query}"',
-            "gsrnamespace": 6, "gsrlimit": 25,
-            "prop": "imageinfo", "iiprop": "url|extmetadata|mime",
-            "iiurlwidth": 1800
-        }
-        response = session.get("https://commons.wikimedia.org/w/api.php", params=params, timeout=30)
-        response.raise_for_status()
-        pages = response.json().get("query", {}).get("pages", {})
-        return sorted(pages.values(), key=lambda p: p.get("title", ""))
-    except Exception as exc:
-        print(f"Commons search failed ({query}): {exc}", file=sys.stderr)
-        return []
+    global last_commons_request
+    params = {
+        "action": "query", "format": "json", "generator": "search",
+        "gsrsearch": f'filetype:bitmap "{query}"',
+        "gsrnamespace": 6, "gsrlimit": 25,
+        "prop": "imageinfo", "iiprop": "url|extmetadata|mime",
+        "iiurlwidth": 1600, "maxlag": 5
+    }
+    # Wikimedia throttles bursts: space requests and retry 429/503 responses.
+    wait_for = max(0.0, 3.2 - (time.monotonic() - last_commons_request))
+    if wait_for:
+        time.sleep(wait_for)
+    for attempt, delay in enumerate((0, 6, 15), start=1):
+        try:
+            response = session.get("https://commons.wikimedia.org/w/api.php", params=params, timeout=45)
+            last_commons_request = time.monotonic()
+            if response.status_code in (429, 503):
+                if attempt < 3:
+                    time.sleep(delay or 6)
+                    continue
+            response.raise_for_status()
+            pages = response.json().get("query", {}).get("pages", {})
+            return sorted(pages.values(), key=lambda p: p.get("title", ""))
+        except Exception as exc:
+            last_commons_request = time.monotonic()
+            if attempt < 3:
+                time.sleep(delay or 6)
+                continue
+            print(f"Commons search failed ({query}): {exc}", file=sys.stderr)
+    return []
 
 def image_to_jpg(content, destination):
     im = Image.open(io.BytesIO(content))
@@ -125,7 +141,7 @@ def get_commons_candidates(query, exact=True):
         if not accepted_commons_license(ext):
             continue
         candidates.append({
-            "url": info.get("url") or info.get("thumburl"),
+            "url": info.get("thumburl") or info.get("url"),
             "title": page.get("title", "").replace("File:", ""),
             "author": clean_html(ext.get("Artist", {}).get("value", "")),
             "license": lic,
@@ -212,7 +228,7 @@ for variety in varieties:
             print(f"Commons image failed for {variety} {url}: {exc}", file=sys.stderr)
             if target.exists():
                 target.unlink()
-        time.sleep(0.15)
+        time.sleep(0.5)
     summary[variety] = saved
     print(f"{variety}: {saved}/3 JPG")
 
