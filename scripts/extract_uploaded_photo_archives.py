@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Extract user-supplied lemon photo archives into static JPG files for GitHub Pages."""
+# Build revision 1: static JPEG output, no runtime archive extraction.
 from __future__ import annotations
 
 import json
