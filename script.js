@@ -100,7 +100,7 @@ async function loadProductPhotos(product) {
         if (!response.ok) throw new Error("Archivio fotografico non disponibile");
         const zip = await JSZip.loadAsync(await response.arrayBuffer());
         const files = Object.values(zip.files)
-          .filter(file => !file.dir && /\\.(jpe?g)$/i.test(file.name) && !file.name.includes("__MACOSX"))
+          .filter(file => !file.dir && /\.(jpe?g)$/i.test(file.name) && !file.name.includes("__MACOSX"))
           .sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
         extractedPhotoCache[product.name] = await Promise.all(files.map(async file => {
           const blob = await file.async("blob");
