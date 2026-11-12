@@ -1,20 +1,5 @@
 {
-  "Limone Caviale": [
-    {
-      "url": "https://greenartstore.gr/products/λεμονιά-χαβιάρι-citrus-australasica-fingerlime",
-      "title": "Frutto tagliato — pagina prodotto",
-      "author": "Green Art Store",
-      "license": "Licenza da verificare prima dell'uso commerciale",
-      "source": "https://greenartstore.gr/products/λεμονιά-χαβιάρι-citrus-australasica-fingerlime"
-    },
-    {
-      "url": "https://www.pflanzmich.de/produkt/198231/kaviar-limette.html",
-      "title": "Pianta — pagina prodotto",
-      "author": "Pflanzmich",
-      "license": "Licenza da verificare prima dell'uso commerciale",
-      "source": "https://www.pflanzmich.de/produkt/198231/kaviar-limette.html"
-    }
-  ],
+  "Limone Caviale": [],
   "Limone Siracusano": [
     {
       "url": "https://legeorgiche.fra1.digitaloceanspaces.com/wp-content/uploads/2022/03/22210339/Limone-Femminello-Siracusano-Limone-di-Siracusa-IGP-Citrus-limon-Vaso-20cm-.webp",
@@ -38,15 +23,7 @@
       "source": "https://en.vivaimiano.com/cdn/shop/files/pianta-di-limone-femminello-siracusano-frutto-agrumi_2.jpg?v=1766152559"
     }
   ],
-  "Limone Femminello": [
-    {
-      "url": "https://www.savinivivai.it/it/shop/pianta-di-limone-femminello-siracusano-internodato-in-vaso-35-cm.html",
-      "title": "Pianta — riferimento Femminello, non cultivar specifica",
-      "author": "Savini Vivai",
-      "license": "Licenza da verificare prima dell'uso commerciale",
-      "source": "https://www.savinivivai.it/it/shop/pianta-di-limone-femminello-siracusano-internodato-in-vaso-35-cm.html"
-    }
-  ],
+  "Limone Femminello": [],
   "Limone Lunario": [
     {
       "url": "https://www.vivaiodicastelletto.it/1571243-large_default/limone-lunario-citrus-limon-limone-4-stagioni-pianta-in-vaso-o22-cm-agrumi-di-sicilia.jpg",
@@ -107,13 +84,6 @@
       "author": "Promesse de Fleurs",
       "license": "Licenza da verificare prima dell'uso commerciale",
       "source": "https://www.promessedefleurs.ie/media/catalog/product/c/i/citrus-limon-femminello-carrubaro-87030-1.jpg"
-    },
-    {
-      "url": "https://www.savinivivai.it/it/shop/pianta-di-limone-femminello-carrubaro-alta-100-120-cm-in-vaso-24-cm.html",
-      "title": "Pianta — pagina prodotto",
-      "author": "Savini Vivai",
-      "license": "Licenza da verificare prima dell'uso commerciale",
-      "source": "https://www.savinivivai.it/it/shop/pianta-di-limone-femminello-carrubaro-alta-100-120-cm-in-vaso-24-cm.html"
     }
   ],
   "Limone Amalfitana": [
@@ -130,13 +100,6 @@
       "author": "Fruitmentor",
       "license": "Licenza da verificare prima dell'uso commerciale",
       "source": "https://shop.fruitmentor.com/cdn/shop/files/Amalfi-Lemon-1.webp?v=1780996717&width=1920"
-    },
-    {
-      "url": "https://www.savinivivai.it/it/shop/pianta-di-limone-sfusato-amalfitano-in-vaso-20-22-cm.html",
-      "title": "Pianta — pagina prodotto",
-      "author": "Savini Vivai",
-      "license": "Licenza da verificare prima dell'uso commerciale",
-      "source": "https://www.savinivivai.it/it/shop/pianta-di-limone-sfusato-amalfitano-in-vaso-20-22-cm.html"
     }
   ],
   "Limone Zagara Bianca": [
@@ -153,13 +116,6 @@
       "author": "Goel Bio",
       "license": "Licenza da verificare prima dell'uso commerciale",
       "source": "https://goel.bio/100-large_default/limone-femminello-zagara-goel-bio.jpg"
-    },
-    {
-      "url": "https://www.savinivivai.it/it/shop/pianta-di-limone-femminello-a-zagara-bianca-in-vaso-35-cm.html",
-      "title": "Pianta — pagina prodotto",
-      "author": "Savini Vivai",
-      "license": "Licenza da verificare prima dell'uso commerciale",
-      "source": "https://www.savinivivai.it/it/shop/pianta-di-limone-femminello-a-zagara-bianca-in-vaso-35-cm.html"
     }
   ],
   "Arancio Tarocco": [
@@ -176,13 +132,6 @@
       "author": "Tasty Landscape",
       "license": "Licenza da verificare prima dell'uso commerciale",
       "source": "https://i0.wp.com/tastylandscape.com/wp-content/uploads/2016/02/Tarocco-close-up-2.jpg"
-    },
-    {
-      "url": "https://agrumilenzi.it/citrus/arancio-tarocco-meli-citrus-sinensis/",
-      "title": "Varietà — pagina prodotto",
-      "author": "Agrumi Lenzi",
-      "license": "Licenza da verificare prima dell'uso commerciale",
-      "source": "https://agrumilenzi.it/citrus/arancio-tarocco-meli-citrus-sinensis/"
     }
   ],
   "Arancio Washington": [
@@ -199,13 +148,6 @@
       "author": "Greg Alder",
       "license": "Licenza da verificare prima dell'uso commerciale",
       "source": "https://gregalder.com/yardposts/wp-content/uploads/2022/02/Washington-navel-and-Cara-Cara-navel-oranges-cut-open.jpg"
-    },
-    {
-      "url": "https://agrumilenzi.it/en/negozio/citrusen/washington-navel-sweet-orange-citrus-sinensis/",
-      "title": "Varietà — pagina prodotto",
-      "author": "Agrumi Lenzi",
-      "license": "Licenza da verificare prima dell'uso commerciale",
-      "source": "https://agrumilenzi.it/en/negozio/citrusen/washington-navel-sweet-orange-citrus-sinensis/"
     }
   ],
   "Arancio Moro": [
@@ -238,13 +180,6 @@
       "author": "eGarden",
       "license": "Licenza da verificare prima dell'uso commerciale",
       "source": "https://egarden.store/wp-content/uploads/2020/09/arancio-navelina-nano-v20-egarden.store-4-200x300.jpg"
-    },
-    {
-      "url": "https://agrumilenzi.it/en/negozio/citrusen/washington-navel-sweet-orange-citrus-sinensis/",
-      "title": "Arancio Navel — pagina di riferimento, cultivar da confermare",
-      "author": "Agrumi Lenzi",
-      "license": "Licenza da verificare prima dell'uso commerciale",
-      "source": "https://agrumilenzi.it/en/negozio/citrusen/washington-navel-sweet-orange-citrus-sinensis/"
     }
   ],
   "Arancio Valencia": [
@@ -293,13 +228,6 @@
       "author": "Floricoltura Lari",
       "license": "Licenza da verificare prima dell'uso commerciale",
       "source": "https://www.floricolturalari.com/wp-content/uploads/2026/07/img_9191-scaled.jpeg"
-    },
-    {
-      "url": "https://www.savinivivai.it/it/shop/pianta-di-clementino-comune-isa-alto-70-80-cm-in-vaso-20-22-cm.html",
-      "title": "Pianta — pagina prodotto",
-      "author": "Savini Vivai",
-      "license": "Licenza da verificare prima dell'uso commerciale",
-      "source": "https://www.savinivivai.it/it/shop/pianta-di-clementino-comune-isa-alto-70-80-cm-in-vaso-20-22-cm.html"
     }
   ],
   "Clementino Hermand": [
@@ -339,13 +267,6 @@
       "author": "Agrumi Sanzà",
       "license": "Licenza da verificare prima dell'uso commerciale",
       "source": "https://www.agrumisanza.com/wp-content/uploads/2022/08/Mandarini-Marzaiolo-Tardivo-o-Marzolo-Siciliani-tagliati.jpg"
-    },
-    {
-      "url": "https://sadoalagrumisicilia.it/products/mandarino-marzaiolo",
-      "title": "Varietà — pagina prodotto",
-      "author": "Sadoala Agrumi Sicilia",
-      "license": "Licenza da verificare prima dell'uso commerciale",
-      "source": "https://sadoalagrumisicilia.it/products/mandarino-marzaiolo"
     }
   ],
   "Mandarino Tardivo": [
@@ -362,13 +283,6 @@
       "author": "Slow Sicily",
       "license": "Licenza da verificare prima dell'uso commerciale",
       "source": "https://i0.wp.com/slow-sicily.com/wp-content/uploads/2024/11/Mandarino-Tardivo-di-Ciaculli-20.jpg?resize=1200%2C900&ssl=1"
-    },
-    {
-      "url": "https://www.savinivivai.it/it/shop/pianta-di-mandarino-comune-tardivo-ciaculli-in-vaso-35-cm.html",
-      "title": "Pianta — pagina prodotto",
-      "author": "Savini Vivai",
-      "license": "Licenza da verificare prima dell'uso commerciale",
-      "source": "https://www.savinivivai.it/it/shop/pianta-di-mandarino-comune-tardivo-ciaculli-in-vaso-35-cm.html"
     }
   ],
   "Kounguat": [
@@ -424,13 +338,6 @@
       "author": "Agrumi Lenzi",
       "license": "Licenza da verificare prima dell'uso commerciale",
       "source": "https://agrumilenzi.it/wp-content/uploads/2016/04/DSC01174-01-1.jpeg"
-    },
-    {
-      "url": "https://www.savinivivai.it/it/shop/pianta-di-kumquat-gigante-alta-150-160-cm-in-vaso-35-cm.html",
-      "title": "Pianta — pagina prodotto",
-      "author": "Savini Vivai",
-      "license": "Licenza da verificare prima dell'uso commerciale",
-      "source": "https://www.savinivivai.it/it/shop/pianta-di-kumquat-gigante-alta-150-160-cm-in-vaso-35-cm.html"
     }
   ],
   "Lime Taiti": [
@@ -447,13 +354,6 @@
       "author": "Citrus Spot",
       "license": "Licenza da verificare prima dell'uso commerciale",
       "source": "https://www.citrusspot.com/wp-content/uploads/2024/01/240118-lime-tree-in-a-pot-FI.jpg"
-    },
-    {
-      "url": "https://citruscentre.co.uk/products/tahiti-lime",
-      "title": "Varietà — pagina prodotto",
-      "author": "Citrus Centre",
-      "license": "Licenza da verificare prima dell'uso commerciale",
-      "source": "https://citruscentre.co.uk/products/tahiti-lime"
     }
   ],
   "Lime Singapore": [],
@@ -471,13 +371,6 @@
       "author": "Wikimedia Commons",
       "license": "Licenza da verificare prima dell'uso commerciale",
       "source": "https://commons.wikimedia.org/wiki/File:Citrus_paradisi_(Grapefruit,_pink).jpg"
-    },
-    {
-      "url": "https://www.savinivivai.it/it/shop/pianta-di-pompelmo-rosa-in-vaso-35-cm.html",
-      "title": "Pianta — pagina prodotto",
-      "author": "Savini Vivai",
-      "license": "Licenza da verificare prima dell'uso commerciale",
-      "source": "https://www.savinivivai.it/it/shop/pianta-di-pompelmo-rosa-in-vaso-35-cm.html"
     }
   ],
   "Pompelmo Bianco": [
