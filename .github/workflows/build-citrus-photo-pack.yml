@@ -1,0 +1,37 @@
+name: Build citrus JPG photo pack
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/build_citrus_photos.py"
+      - "images/product-photos.json"
+      - ".github/workflows/build-citrus-photo-pack.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install image tools
+        run: python -m pip install --disable-pip-version-check requests pillow
+      - name: Download, verify and convert citrus photos
+        run: python scripts/build_citrus_photos.py
+      - name: Upload JPG archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: Azienda-Siracusa-21-varieta-JPG
+          path: |
+            Azienda-Siracusa-21-varieta-JPG.zip
+            photo-pack/fonti-e-licenze.csv
+            photo-pack/riepilogo.json
+          if-no-files-found: error
+          retention-days: 14
