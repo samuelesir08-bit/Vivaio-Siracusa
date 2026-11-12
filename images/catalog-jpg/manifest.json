@@ -1,0 +1,102 @@
+{
+  "total_jpg": 24,
+  "varieties": 8,
+  "files": [
+    {
+      "varieta": "Limone Caviale",
+      "file": "images/catalog-jpg/limone-caviale/limone-caviale-01.jpg"
+    },
+    {
+      "varieta": "Limone Caviale",
+      "file": "images/catalog-jpg/limone-caviale/limone-caviale-02.jpg"
+    },
+    {
+      "varieta": "Limone Caviale",
+      "file": "images/catalog-jpg/limone-caviale/limone-caviale-03.jpg"
+    },
+    {
+      "varieta": "Limone Siracusano",
+      "file": "images/catalog-jpg/limone-siracusano/limone-siracusano-01.jpg"
+    },
+    {
+      "varieta": "Limone Siracusano",
+      "file": "images/catalog-jpg/limone-siracusano/limone-siracusano-02.jpg"
+    },
+    {
+      "varieta": "Limone Siracusano",
+      "file": "images/catalog-jpg/limone-siracusano/limone-siracusano-03.jpg"
+    },
+    {
+      "varieta": "Limone Femminello",
+      "file": "images/catalog-jpg/limone-femminello/limone-femminello-01.jpg"
+    },
+    {
+      "varieta": "Limone Femminello",
+      "file": "images/catalog-jpg/limone-femminello/limone-femminello-02.jpg"
+    },
+    {
+      "varieta": "Limone Femminello",
+      "file": "images/catalog-jpg/limone-femminello/limone-femminello-03.jpg"
+    },
+    {
+      "varieta": "Limone Lunario",
+      "file": "images/catalog-jpg/limone-lunario/limone-lunario-01.jpg"
+    },
+    {
+      "varieta": "Limone Lunario",
+      "file": "images/catalog-jpg/limone-lunario/limone-lunario-02.jpg"
+    },
+    {
+      "varieta": "Limone Lunario",
+      "file": "images/catalog-jpg/limone-lunario/limone-lunario-03.jpg"
+    },
+    {
+      "varieta": "Limone Bergamotto",
+      "file": "images/catalog-jpg/limone-bergamotto/limone-bergamotto-01.jpg"
+    },
+    {
+      "varieta": "Limone Bergamotto",
+      "file": "images/catalog-jpg/limone-bergamotto/limone-bergamotto-02.jpg"
+    },
+    {
+      "varieta": "Limone Bergamotto",
+      "file": "images/catalog-jpg/limone-bergamotto/limone-bergamotto-03.jpg"
+    },
+    {
+      "varieta": "Limone Carrubbo",
+      "file": "images/catalog-jpg/limone-carrubbo/limone-carrubbo-01.jpg"
+    },
+    {
+      "varieta": "Limone Carrubbo",
+      "file": "images/catalog-jpg/limone-carrubbo/limone-carrubbo-02.jpg"
+    },
+    {
+      "varieta": "Limone Carrubbo",
+      "file": "images/catalog-jpg/limone-carrubbo/limone-carrubbo-03.jpg"
+    },
+    {
+      "varieta": "Limone Amalfitana",
+      "file": "images/catalog-jpg/limone-amalfitana/limone-amalfitana-01.jpg"
+    },
+    {
+      "varieta": "Limone Amalfitana",
+      "file": "images/catalog-jpg/limone-amalfitana/limone-amalfitana-02.jpg"
+    },
+    {
+      "varieta": "Limone Amalfitana",
+      "file": "images/catalog-jpg/limone-amalfitana/limone-amalfitana-03.jpg"
+    },
+    {
+      "varieta": "Limone Zagara Bianca",
+      "file": "images/catalog-jpg/limone-zagara-bianca/limone-zagara-bianca-01.jpg"
+    },
+    {
+      "varieta": "Limone Zagara Bianca",
+      "file": "images/catalog-jpg/limone-zagara-bianca/limone-zagara-bianca-02.jpg"
+    },
+    {
+      "varieta": "Limone Zagara Bianca",
+      "file": "images/catalog-jpg/limone-zagara-bianca/limone-zagara-bianca-03.jpg"
+    }
+  ]
+}
