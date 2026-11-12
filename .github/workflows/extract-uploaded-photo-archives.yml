@@ -1,0 +1,49 @@
+name: Convert uploaded lemon photo archives to JPG
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/extract_uploaded_photo_archives.py"
+      - "images/LIMONE CAVIALE.zip"
+      - "images/limone-siracusano-foto.zip"
+      - "images/limone-femminello-foto.zip"
+      - "images/limone-lunario-corretto-foto.zip"
+      - "images/limone-bergamotto-foto.zip"
+      - "images/limone-carrubbo-foto.zip"
+      - "images/limone-amalfitana-foto.zip"
+      - "images/limone-zagara-bianca-foto-aggiornato.zip"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract-jpg:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install image converter
+        run: python -m pip install --disable-pip-version-check pillow
+      - name: Extract and convert all uploaded photos
+        run: python scripts/extract_uploaded_photo_archives.py
+      - name: Commit JPG files and catalogue paths
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add images/catalog-jpg images/product-photos.json
+          if git diff --cached --quiet; then
+            echo "No JPG or catalogue changes to commit."
+          else
+            git commit -m "Add static JPG photos for lemon varieties"
+            git push
+          fi
+      - name: Report converted files
+        if: always()
+        run: |
+          if [ -f images/catalog-jpg/manifest.json ]; then
+            python -c "import json; d=json.load(open('images/catalog-jpg/manifest.json')); print(f\"Converted {d['total_jpg']} JPG files across {d['varieties']} varieties.\")" >> "$GITHUB_STEP_SUMMARY"
+          fi
