@@ -67,18 +67,6 @@ let galleryImages = [];
 let galleryIndex = 0;
 let galleryRequest = 0;
 
-const uploadedPhotoArchives = {
-  "Limone Caviale": "images/LIMONE%20CAVIALE.zip",
-  "Limone Siracusano": "images/limone-siracusano-foto.zip",
-  "Limone Femminello": "images/limone-femminello-foto.zip",
-  "Limone Lunario": "images/limone-lunario-corretto-foto.zip",
-  "Limone Bergamotto": "images/limone-bergamotto-foto.zip",
-  "Limone Carrubbo": "images/limone-carrubbo-foto.zip",
-  "Limone Amalfitana": "images/limone-amalfitana-foto.zip",
-  "Limone Zagara Bianca": "images/limone-zagara-bianca-foto-aggiornato.zip"
-};
-const extractedPhotoCache = {};
-
 async function loadProductPhotos(product) {
   const request = ++galleryRequest;
   galleryImages = [];
@@ -92,30 +80,12 @@ async function loadProductPhotos(product) {
   galleryNext.hidden = true;
 
   try {
-    const archiveUrl = uploadedPhotoArchives[product.name];
-    if (archiveUrl) {
-      if (!window.JSZip) throw new Error("Lettore ZIP non disponibile");
-      if (!extractedPhotoCache[product.name]) {
-        const response = await fetch(archiveUrl);
-        if (!response.ok) throw new Error("Archivio fotografico non disponibile");
-        const zip = await JSZip.loadAsync(await response.arrayBuffer());
-        const files = Object.values(zip.files)
-          .filter(file => !file.dir && /\.(jpe?g)$/i.test(file.name) && !file.name.includes("__MACOSX"))
-          .sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
-        extractedPhotoCache[product.name] = await Promise.all(files.map(async file => {
-          const blob = await file.async("blob");
-          return { url: URL.createObjectURL(blob), title: file.name };
-        }));
-      }
-      galleryImages = extractedPhotoCache[product.name];
-    } else {
-      if (!window.productPhotoCatalog) {
-        const response = await fetch("images/product-photos.json");
-        if (!response.ok) throw new Error("Catalogo foto non disponibile");
-        window.productPhotoCatalog = await response.json();
-      }
-      galleryImages = window.productPhotoCatalog[product.name] || [];
+    if (!window.productPhotoCatalog) {
+      const response = await fetch("images/product-photos.json");
+      if (!response.ok) throw new Error("Catalogo foto non disponibile");
+      window.productPhotoCatalog = await response.json();
     }
+    galleryImages = window.productPhotoCatalog[product.name] || [];
     if (request !== galleryRequest) return;
     if (!galleryImages.length) {
       galleryPlaceholder.textContent = "Foto JPG non ancora disponibili per questa varietà.";
