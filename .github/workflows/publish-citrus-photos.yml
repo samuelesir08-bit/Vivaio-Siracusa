@@ -43,6 +43,12 @@ jobs:
               "Kounguat Gigante": ("images/Kounguat_Gigante.zip", "kounguat-gigante"),
               "Lime Taiti": ("images/Lime_Tahiti.zip", "lime-tahiti"),
               "Lime Singapore": ("images/Lime_Singapore.zip", "lime-singapore"),
+              "Pompelmo Rosa": ("images/Pompelmo_Rosa.zip", "pompelmo-rosa"),
+              "Pompelmo Bianco": ("images/Pompelmo_Bianco.zip", "pompelmo-bianco"),
+              "Pompelmo Rosso": ("images/Pompelmo_Rosso.zip", "pompelmo-rosso"),
+              "Cedro Diamante": ("images/Cedro_Diamante.zip", "cedro-diamante"),
+              "Cedro Virettone": ("images/Cedro_Virettone.zip", "cedro-virettone"),
+              "Cedro Mano di Buddha": ("images/Cedro_Mano_di_Buddha.zip", "cedro-mano-di-buddha"),
           }
 
           filenames = {
