@@ -1,0 +1,83 @@
+name: Publish citrus product photos
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-photos:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract orange photos and update gallery catalog
+        run: |
+          python - <<'PY'
+          import json
+          import zipfile
+          from pathlib import Path
+
+          root = Path(".")
+          catalog_path = root / "images/product-photos.json"
+          catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+
+          varieties = {
+              "Arancio Navellino": ("images/arancio_navellino.zip", "arancio-navellino"),
+              "Arancio Valencia": ("images/arancio_valencia.zip", "arancio-valencia"),
+              "Arancio Calabrese": ("images/arancio_calabrese.zip", "arancio-calabrese"),
+          }
+
+          filenames = {
+              "01_pianta.jpg": ("01", "Pianta"),
+              "02_frutti_sulla_pianta.jpg": ("02", "Frutti sulla pianta"),
+              "03_frutto_tagliato.jpg": ("03", "Frutto tagliato"),
+          }
+
+          for variety, (archive_name, slug) in varieties.items():
+              archive = root / archive_name
+              if not archive.exists():
+                  raise FileNotFoundError(f"Archivio non trovato: {archive}")
+
+              destination = root / "images/catalog-jpg" / slug
+              destination.mkdir(parents=True, exist_ok=True)
+              photos = []
+
+              with zipfile.ZipFile(archive) as z:
+                  for source_name, (number, title) in filenames.items():
+                      matches = [n for n in z.namelist() if n.lower().endswith(source_name.lower())]
+                      if not matches:
+                          raise FileNotFoundError(f"{source_name} assente in {archive_name}")
+                      target_name = f"{slug}-{number}.jpg"
+                      with z.open(matches[0]) as source, (destination / target_name).open("wb") as target:
+                          target.write(source.read())
+                      photos.append({
+                          "url": f"images/catalog-jpg/{slug}/{target_name}",
+                          "title": f"{variety} — {title}",
+                          "author": "Foto fornite da Vivaio Siracusa",
+                          "license": "Archivio fotografico fornito dal titolare del progetto",
+                          "source": archive_name
+                      })
+
+              catalog[variety] = photos
+
+          catalog_path.write_text(
+              json.dumps(catalog, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8"
+          )
+          PY
+
+      - name: Commit published JPG photos and gallery catalog
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add images/catalog-jpg images/product-photos.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish Navellino, Valencia and Calabrese orange photos"
+            git push
+          fi
