@@ -240,43 +240,71 @@
   ],
   "Arancio Navellino": [
     {
-      "url": "https://egarden.store/wp-content/uploads/2020/09/arancio-navelina-nano-v20-egarden.store-4-200x300.jpg",
-      "title": "Pianta — Navelina (nome catalogo Navellino da verificare)",
-      "author": "eGarden",
-      "license": "Licenza da verificare prima dell'uso commerciale",
-      "source": "https://egarden.store/wp-content/uploads/2020/09/arancio-navelina-nano-v20-egarden.store-4-200x300.jpg"
+      "url": "images/catalog-jpg/arancio-navellino/arancio-navellino-01.jpg",
+      "title": "Arancio Navellino — Pianta",
+      "author": "Foto fornite da Vivaio Siracusa",
+      "license": "Archivio fotografico fornito dal titolare del progetto",
+      "source": "images/arancio_navellino.zip"
+    },
+    {
+      "url": "images/catalog-jpg/arancio-navellino/arancio-navellino-02.jpg",
+      "title": "Arancio Navellino — Frutti sulla pianta",
+      "author": "Foto fornite da Vivaio Siracusa",
+      "license": "Archivio fotografico fornito dal titolare del progetto",
+      "source": "images/arancio_navellino.zip"
+    },
+    {
+      "url": "images/catalog-jpg/arancio-navellino/arancio-navellino-03.jpg",
+      "title": "Arancio Navellino — Frutto tagliato",
+      "author": "Foto fornite da Vivaio Siracusa",
+      "license": "Archivio fotografico fornito dal titolare del progetto",
+      "source": "images/arancio_navellino.zip"
     }
   ],
   "Arancio Valencia": [
     {
-      "url": "https://madisoncitrusnursery.com/cdn/shop/files/midknight-valencia-orange-tree-for-sale-madison-citrus-nursery.jpg?v=1704826358",
-      "title": "Pianta — Valencia Midknight",
-      "author": "Madison Citrus Nursery",
-      "license": "Licenza da verificare prima dell'uso commerciale",
-      "source": "https://madisoncitrusnursery.com/cdn/shop/files/midknight-valencia-orange-tree-for-sale-madison-citrus-nursery.jpg?v=1704826358"
+      "url": "images/catalog-jpg/arancio-valencia/arancio-valencia-01.jpg",
+      "title": "Arancio Valencia — Pianta",
+      "author": "Foto fornite da Vivaio Siracusa",
+      "license": "Archivio fotografico fornito dal titolare del progetto",
+      "source": "images/arancio_valencia.zip"
+    },
+    {
+      "url": "images/catalog-jpg/arancio-valencia/arancio-valencia-02.jpg",
+      "title": "Arancio Valencia — Frutti sulla pianta",
+      "author": "Foto fornite da Vivaio Siracusa",
+      "license": "Archivio fotografico fornito dal titolare del progetto",
+      "source": "images/arancio_valencia.zip"
+    },
+    {
+      "url": "images/catalog-jpg/arancio-valencia/arancio-valencia-03.jpg",
+      "title": "Arancio Valencia — Frutto tagliato",
+      "author": "Foto fornite da Vivaio Siracusa",
+      "license": "Archivio fotografico fornito dal titolare del progetto",
+      "source": "images/arancio_valencia.zip"
     }
   ],
   "Arancio Calabrese": [
     {
-      "url": "https://agrumilenzi.it/wp-content/uploads/2013/02/ovale-calabrese12012014-026.jpg",
-      "title": "Frutto/ramo — Ovale Calabrese",
-      "author": "Agrumi Lenzi",
-      "license": "Licenza da verificare prima dell'uso commerciale",
-      "source": "https://agrumilenzi.it/wp-content/uploads/2013/02/ovale-calabrese12012014-026.jpg"
+      "url": "images/catalog-jpg/arancio-calabrese/arancio-calabrese-01.jpg",
+      "title": "Arancio Calabrese — Pianta",
+      "author": "Foto fornite da Vivaio Siracusa",
+      "license": "Archivio fotografico fornito dal titolare del progetto",
+      "source": "images/arancio_calabrese.zip"
     },
     {
-      "url": "https://citrusvariety.ucr.edu/sites/default/files/ovalesweetorangecrc3625005.jpg",
-      "title": "Frutto — Ovale Calabrese",
-      "author": "UC Riverside",
-      "license": "Licenza da verificare prima dell'uso commerciale",
-      "source": "https://citrusvariety.ucr.edu/sites/default/files/ovalesweetorangecrc3625005.jpg"
+      "url": "images/catalog-jpg/arancio-calabrese/arancio-calabrese-02.jpg",
+      "title": "Arancio Calabrese — Frutti sulla pianta",
+      "author": "Foto fornite da Vivaio Siracusa",
+      "license": "Archivio fotografico fornito dal titolare del progetto",
+      "source": "images/arancio_calabrese.zip"
     },
     {
-      "url": "https://www.oscartintori.it/wp-content/uploads/2017/05/54_web.jpg",
-      "title": "Pianta/frutto — Ovale Calabrese",
-      "author": "Oscar Tintori",
-      "license": "Licenza da verificare prima dell'uso commerciale",
-      "source": "https://www.oscartintori.it/wp-content/uploads/2017/05/54_web.jpg"
+      "url": "images/catalog-jpg/arancio-calabrese/arancio-calabrese-03.jpg",
+      "title": "Arancio Calabrese — Frutto tagliato",
+      "author": "Foto fornite da Vivaio Siracusa",
+      "license": "Archivio fotografico fornito dal titolare del progetto",
+      "source": "images/arancio_calabrese.zip"
     }
   ],
   "Clementino Isa": [
