@@ -16,7 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Extract orange photos and update gallery catalog
+      - name: Extract citrus photos and update gallery catalog
         run: |
           python - <<'PY'
           import json
@@ -34,6 +34,10 @@ jobs:
               "Arancio Tarocco": ("images/arancio-tarocco.zip", "arancio-tarocco"),
               "Arancio Washington": ("images/arancio-washington.zip", "arancio-washington"),
               "Arancio Moro": ("images/arancio-moro.zip", "arancio-moro"),
+              "Clementino Isa": ("images/Clementino_ISA.zip", "clementino-isa"),
+              "Clementino Hermand": ("images/Clementino_Hermand.zip", "clementino-hermand"),
+              "Mandarino Marzaiolo": ("images/Mandarino_Marzaiolo.zip", "mandarino-marzaiolo"),
+              "Mandarino Tardivo": ("images/Mandarino_Tardivo.zip", "mandarino-tardivo"),
           }
 
           filenames = {
