@@ -38,6 +38,11 @@ jobs:
               "Clementino Hermand": ("images/Clementino_Hermand.zip", "clementino-hermand"),
               "Mandarino Marzaiolo": ("images/Mandarino_Marzaiolo.zip", "mandarino-marzaiolo"),
               "Mandarino Tardivo": ("images/Mandarino_Tardivo.zip", "mandarino-tardivo"),
+              "Kounguat": ("images/Kounguat.zip", "kounguat"),
+              "LemonKounguat": ("images/LemonKounguat.zip", "lemonkounguat"),
+              "Kounguat Gigante": ("images/Kounguat_Gigante.zip", "kounguat-gigante"),
+              "Lime Taiti": ("images/Lime_Tahiti.zip", "lime-tahiti"),
+              "Lime Singapore": ("images/Lime_Singapore.zip", "lime-singapore"),
           }
 
           filenames = {
